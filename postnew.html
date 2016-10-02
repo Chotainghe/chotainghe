@@ -9,7 +9,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>Đăng ký tài khoản </title>
+    <title>Đăng tin sản phẩm </title>
 
     <!-- Bootstrap Core CSS -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
@@ -36,11 +36,12 @@
             <div class="input-group" style="width:87%; margin-top:5px; margin-left:7%; margin-bottom:5px;">
                 <div class="input-group-btn">
                     <button id="cbSearchCategory" name="category" class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
-                        Tất Cả <span class="caret"></span>
+                        Tất Cả<span class="caret"></span>
                     </button>
                     <ul class="dropdown-menu columns" aria-labelledby="cbSearchCategory">
                         <li><a onclick="$('#cbSearchCategory').html('Tất Cả <span class=&quot;caret&quot;></span>')">Tất Cả</a></li>
-                              <li><a onclick="$('#cbSearchCategory').html('Phụ Kiện>Khác <span class=&quot;caret&quot;></span>')">Phụ Kiện &gt; Khác</a></li>
+						<li><a onclick="$('#cbSearchCategory').html('Tai nghe Sony <span class=&quot;caret&quot;></span>')">Tai nghe Sony</a></li>
+                        <li><a onclick="$('#cbSearchCategory').html('Phụ Kiện>Khác <span class=&quot;caret&quot;></span>')">Phụ Kiện &gt; Khác</a></li>
                     </ul>
                 </div>
                 <input type="text" class="form-control" autofocus="true" placeholder="Tìm kiếm theo tên sản phẩm..." name="keyword" id="keyword">
@@ -66,7 +67,7 @@
 				<div>
 					
 				</div>
-                <a class="navbar-brand" href="./index.html">Chợ Tai Nghe</a>
+                <a class="navbar-brand" href="#">Chợ Tai Nghe</a>
             </div>
             <!-- Collect the nav links, forms, and other content for toggling -->
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
@@ -86,7 +87,7 @@
 						<li>
 					
 						</li>
-						 <li><a style="border-style:solid;border:10px ;border-color:red;" href="./login.html">Đăng Nhập</a></li>
+						 <li><a style="border-style:solid;border:10px ;border-color:red;" href="#">Đăng Nhập</a></li>
 						 <li><a href="#">Đăng Tin</a></li>
 						
                 </ul>
@@ -116,21 +117,32 @@
 
             <div class="col-md-9">
 
-                <div style="margin-left:15%; width:70%" class="thumbnail">
+                <div style="width:100%" class="thumbnail">
                     <!--<img class="img-responsive" src="http://placehold.it/800x300" alt="">-->
 					<!--<div class="container">-->
-
-					<div style="text-align:center; font-size:25px; font-family:times new roman; margin-top:20px;;"class="form-title" data-reactid=".1w2tqofzk74.1.1.0.0.0.2"><b>ĐĂNG KÝ</b></div>
-                    <hr>
+					<h3 style="margin-left:3%; font-size:30px"><b>ĐĂNG BÁN SẢN PHẨM</b></h3>
+					<hr>
+					<div style="margin-left:3%; font-size:25px; font-family:times new roman; margin-top:10px;;"class="form-title" data-reactid=".1w2tqofzk74.1.1.0.0.0.2"><b>Thông tin người bán</b></div>
 					<form data-reactid=".1w2tqofzk74.1.1.0.0.0.4">
-					<input style="margin-left:25%; width:50%; margin-bottom:5px" type="text" placeholder="Nhập tên tài khoản" class="form-control" required="" data-reactid=".1w2tqofzk74.1.1.0.0.0.4.2">
-					<input style="margin-left:25%; width:50%; margin-bottom:5px" type="tel" placeholder="Nhập số điện thoại" class="form-control" required="" data-reactid=".1w2tqofzk74.1.1.0.0.0.4.2">
-					<input style="margin-left:25%; width:50%;" type="password" placeholder="Nhập mật khẩu" class="form-control" required="" data-reactid=".1w2tqofzk74.1.1.0.0.0.4.3">
-					<div class="form-group" data-reactid=".1w2tqofzk74.1.1.0.0.0.4.4">
-						<input style="margin-left:25%;" type="checkbox" id="rememberMe" checked="" data-reactid=".1w2tqofzk74.1.1.0.0.0.4.4.0">
-						<label style="width:45%;" for="rememberMe" data-reactid=".1w2tqofzk74.1.1.0.0.0.4.4.1">Tôi đồng ý với các điều khoản sử dụng của chotainghe.com</label>
+					<input style="margin-left:3%; width:50%; margin-bottom:5px;" type="text" placeholder="Nhập tên" class="form-control" required="" data-reactid=".1w2tqofzk74.1.1.0.0.0.4.2">
+					<input style="margin-left:3%; width:50%; margin-bottom:5px;" type="tel" placeholder="Nhập số điện thoại" class="form-control" required="" data-reactid=".1w2tqofzk74.1.1.0.0.0.4.2">
+					<input style="margin-left:3%; width:50%; margin-bottom:5px;" type="text" placeholder="Nhập địa chỉ" class="form-control" required="" data-reactid=".1w2tqofzk74.1.1.0.0.0.4.2">
+					<div style="margin-left:3%; font-size:25px; font-family:times new roman; margin-top:10px;;"class="form-title" data-reactid=".1w2tqofzk74.1.1.0.0.0.2"><b>Nội dung tin</b></div>
+					<div class="input-group-btn">
+                    <button style="text-align:left; margin-left:3%; margin-bottom:5px;" id="cbSearchCategory1" name="category" class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Chọn loại thiết bị âm thanh cần bán <span class="caret"></span></button>
+                    <ul style="margin-left:3%;" class="dropdown-menu columns" aria-labelledby="cbSearchCategory">
+                        <li><a onclick="$('#cbSearchCategory1').html('Chọn loại thiết bị âm thanh cần bán<span class=&quot;caret&quot;></span>')">Loại thiết bị</a></li>
+						<li><a onclick="$('#cbSearchCategory1').html('Tai nghe Sony <span class=&quot;caret&quot;></span>')">Tai nghe Sony</a></li>
+                        <li><a onclick="$('#cbSearchCategory1').html('Phụ Kiện>Khác <span class=&quot;caret&quot;></span>')">Phụ Kiện &gt; Khác</a></li>
+                    </ul>
+					</div>
+					<input style="margin-left:3%; width:50%; margin-bottom:5px;" type="text" placeholder="Nhập tiêu đề" class="form-control" required="" data-reactid=".1w2tqofzk74.1.1.0.0.0.4.2">
+					<input style="margin-left:3%; width:50%; margin-bottom:5px;" type="text" placeholder="Nhập thông tin sản phẩm" class="form-control" required="" data-reactid=".1w2tqofzk74.1.1.0.0.0.4.2">
+					<input style="margin-left:3%; width:50%; margin-bottom:5px;" type="text" name="money" placeholder="Nhập giá tiền cần bán" class="form-control" required="" data-reactid=".1w2tqofzk74.1.1.0.0.0.4.2">
+					<p style="margin-left:3%; margin-bottom:5px;">Hình ảnh: </p>
+					<input style="margin-left:3%; margin-bottom:5px;" tabindex="-1" data-url="https://www2.chotot.com/upload_image.json" data-sequence="0" type="file" multiple="multiple" size="1" class="ai-general-input" id="image_0" style="display: block; cursor: pointer;">
 					<div class="form-group" data-reactid=".1w2tqofzk74.1.1.0.0.0.4.5">
-						<button style="background-color:#337ab7;color:white; width:50%; margin-left:25%; margin-bottom:5px" type="submit" class="btn _2eyhSZKQv1uz_RH2pfHrg3" data-reactid=".1w2tqofzk74.1.1.0.0.0.4.5.1">ĐĂNG KÝ</button>
+						<button style="background-color:#337ab7; width:50%; margin-left:3%; margin-bottom:5px" type="submit" class="btn _2eyhSZKQv1uz_RH2pfHrg3" data-reactid=".1w2tqofzk74.1.1.0.0.0.4.5.1">ĐĂNG TIN</button>
 					
 					<div class="caption-full">
                         </div>
