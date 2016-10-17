@@ -31,9 +31,10 @@
     <!-- Navigation -->
 	<!--Search-->
 	<div class="navbar navbar-default " role="navigation">
-    <div class="container-fluid ">
+    <div class="container">
+	<div class="row">
         <form action="/Post/Filter">
-            <div class="input-group" style="width:87%; margin-top:5px; margin-left:7%; margin-bottom:5px;">
+            <div class="input-group">
                 <div class="input-group-btn">
                     <button id="cbSearchCategory" name="category" class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
                         Tất Cả <span class="caret"></span>
@@ -51,9 +52,10 @@
         </form>
 	</div>
 	</div>
+	</div>
     
 	
-	<nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+	<nav style="background-color: black;" class="navbar navbar-inverse navbar-fixed-top" role="navigation">
         <div class="container">
             <!-- Brand and toggle get grouped for better mobile display -->
             <div class="navbar-header">
@@ -63,10 +65,7 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-				<div>
-					
-				</div>
-                <a class="navbar-brand" href="./index.html">Chợ Tai Nghe</a>
+                <a class="nav-brand img-responsive" href="./index.html"><img src="./images/logo.jpg" style="width:130px; height:52px;"></a>
             </div>
             <!-- Collect the nav links, forms, and other content for toggling -->
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
@@ -85,19 +84,16 @@
                     </li>
 					</ul>
 					<ul class="nav navbar-nav navbar-right">
-						<li>
-					
-						</li>
-						 <li><a style="border-style:solid;border:10px ;border-color:red;" href="./login.html">Đăng Nhập</a></li>
+						 <li><a href="./login.html">Đăng Nhập</a></li>
 						 <li><a href="./postnew.html">Đăng Tin</a></li>
 						
-                </ul>
-				 <ul class="nav navbar-nav navbar-right">
+					</ul>
                         <!--<li><a href="#">Đăng Nhập</a></li>
                     </ul>
             </div>
             <!-- /.navbar-collapse -->
         </div>
+		</div>
         <!-- /.container -->
     </nav>
 
@@ -107,7 +103,6 @@
         <div class="row">
 
             <div class="col-md-3">
-                <p class="lead">Tất cả sản phẩm</p>
                 <div class="list-group">
                     <a href="#" class="list-group-item active">Tất cả</a>
                     <a href="#" class="list-group-item">Tai nghe AKG</a>
@@ -119,43 +114,43 @@
             </div>
 
             <div class="col-md-9">
-
-                <div style="margin-left:15%; width:70%" class="thumbnail">
+			<div class="col-md-2"></div>
+                <div class="col-md-8 col-sm-12 col-xs-12 thumbnail">
                     <!--<img class="img-responsive" src="http://placehold.it/800x300" alt="">-->
 					<!--<div class="container">-->
 
 					<div style="text-align:center; font-size:25px; font-family:times new roman; margin-top:20px;;"class="form-title" data-reactid=".1w2tqofzk74.1.1.0.0.0.2"><b>ĐĂNG NHẬP</b></div>
-                    <hr>
-					<form data-reactid=".1w2tqofzk74.1.1.0.0.0.4">
-					<input style="margin-left:25%; width:50%; margin-bottom:5px" type="tel" placeholder="Nhập số điện thoại" class="form-control" required="" data-reactid=".1w2tqofzk74.1.1.0.0.0.4.2">
-					<input style="margin-left:25%; width:50%;" type="password" placeholder="Nhập mật khẩu" class="form-control" required="" data-reactid=".1w2tqofzk74.1.1.0.0.0.4.3">
-					<div class="form-group" data-reactid=".1w2tqofzk74.1.1.0.0.0.4.4">
-						<input style="margin-left:25%;" type="checkbox" id="rememberMe" checked="" data-reactid=".1w2tqofzk74.1.1.0.0.0.4.4.0">
-						<label for="rememberMe" data-reactid=".1w2tqofzk74.1.1.0.0.0.4.4.1">Ghi nhớ tài khoản</label>
+					<hr>
+					<div class="col-md-3"></div>
+					<div class="col-md-6">
+					<input style="margin-bottom:5px" type="tel" placeholder="Nhập số điện thoại" class="form-control" required="" data-reactid=".1w2tqofzk74.1.1.0.0.0.4.2">
+					<input style="margin-bottom:5px" type="password" placeholder="Nhập mật khẩu" class="form-control" required="" data-reactid=".1w2tqofzk74.1.1.0.0.0.4.3">
+					<div class="form-group">
+					<input type="checkbox" id="rememberMe" checked="">
+					Ghi nhớ tài khoản
+					<div class="form-group">
+					<button style="background-color:#337ab7; color:white; margin-bottom:5px;" type="submit" class="btn _2eyhSZKQv1uz_RH2pfHrg3 col-md-12 col-sm-12 col-xs-12">Đăng nhập</button>
+					<form action="./register.html">
 					
-					<div class="form-group" data-reactid=".1w2tqofzk74.1.1.0.0.0.4.5">
-						<button style="background-color:#337ab7;color:white; width:50%; margin-left:25%; margin-bottom:5px" type="submit" class="btn _2eyhSZKQv1uz_RH2pfHrg3" data-reactid=".1w2tqofzk74.1.1.0.0.0.4.5.1">Đăng nhập</button>
-						<div style="background-color:#337ab7; width:50%; margin-left:25%; margin-bottom:5px" type="submit" class="btn _2eyhSZKQv1uz_RH2pfHrg3"><a style=";color:white;" href="./register.html">Đăng Kí</a></div>
+					<button style="background-color:#337ab7; color:white; margin-bottom:5px;" type="submit" class="btn col-md-12 col-sm-12 col-xs-12">Đăng Ký<button>
 					
+					</form>
+					</div>
+					</div>
+					</div>
+					</div>
 					<div class="caption-full">
                         </div>
                     <div class="ratings">
-                                                 
-                        </p>
+                                               
                     </div>
 					
 
                 </div>
-				
+				</div>
 
             </div>
-
-        </div>
-
-    </div>
-	
-
-    </div> <!-- /container -->
+ <!-- /container -->
 
 
     <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->

@@ -9,7 +9,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>Đăng tin sản phẩm </title>
+    <title>Tìm kiếm sản phẩm</title>
 
     <!-- Bootstrap Core CSS -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
@@ -23,7 +23,32 @@
         <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
         <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
-
+<script>
+var products = [
+		"./images/tainghe1.jpg",
+		"./images/tainghe2.jpg",
+		"./images/tainghe3.jpg",
+		"./images/tainghe4.jpg",
+		"./images/tainghe5.jpg",
+		];
+		<!-- END Tao ra danh sach san pham -->
+		
+		<!-- Khi trang web dang duoc load thi se chay code ben duoi -->
+		function timkiem()
+		{
+			
+			var result="";
+			var keyword = document.getElementById("keyword").value;
+			if(keyword == "tainghe" || keyword == "tai nghe")
+			{
+				
+				result += "<a class='col-md-3 col-sm-6 col-xs-12 img-responsive' href=''> <img class='img-responsive' src='" +products[0] + "'style='width:200px; height:200px; border:2px solid;'></a>"
+				result += "<a class='col-md-3 col-sm-6 col-xs-12 img-responsive' href=''> <img class='img-responsive' src='" +products[1] + "'style='width:200px; height:200px; border:2px solid;'></a>"
+				result += "<a class='col-md-3 col-sm-6 col-xs-12 img-responsive' href=''> <img class='img-responsive' src='" +products[2] + "'style='width:200px; height:200px; border:2px solid;'></a>"				
+			}
+			document.getElementById("ketqua").innerHTML=result;		
+		}
+</script>
 </head>
 
 <body>
@@ -33,24 +58,25 @@
 	<div class="navbar navbar-default " role="navigation">
     <div class="container">
 	<div class="row">
-        <form action="/Post/Filter">
+	<div class="col-md-12">
+        <!--<form action="./search.html">-->
             <div class="input-group">
                 <div class="input-group-btn">
                     <button id="cbSearchCategory" name="category" class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
-                        Tất Cả<span class="caret"></span>
+                        Tất Cả <span class="caret"></span>
                     </button>
                     <ul class="dropdown-menu columns" aria-labelledby="cbSearchCategory">
                         <li><a onclick="$('#cbSearchCategory').html('Tất Cả <span class=&quot;caret&quot;></span>')">Tất Cả</a></li>
-						<li><a onclick="$('#cbSearchCategory').html('Tai nghe Sony <span class=&quot;caret&quot;></span>')">Tai nghe Sony</a></li>
-                        <li><a onclick="$('#cbSearchCategory').html('Phụ Kiện>Khác <span class=&quot;caret&quot;></span>')">Phụ Kiện &gt; Khác</a></li>
+                              <li><a onclick="$('#cbSearchCategory').html('Phụ Kiện>Khác <span class=&quot;caret&quot;></span>')">Phụ Kiện &gt; Khác</a></li>
                     </ul>
                 </div>
-                <input type="text" class="form-control" autofocus="true" placeholder="Tìm kiếm theo tên sản phẩm..." name="keyword" id="keyword">
+                <input type="text" class="form-control" autofocus="true" placeholder="Tìm kiếm theo tên sản phẩm..." name="keyword" id="keyword" onkeypress="timkiem()">
                 <div class="input-group-btn">
-                    <button class="btn btn-default" type="submit"><i class="glyphicon glyphicon-search"></i></button>
+                    <button class="btn btn-default" type="submit" onclick="timkiem()"><i class="glyphicon glyphicon-search"></i></button>
                 </div>
             </div>
-        </form>
+        <!--</form>-->
+		</div>
 	</div>
 	</div>
 	</div>
@@ -80,23 +106,18 @@
 					 <li>
                         <a href="#">Loa mini/Bluetooth</a>
                     </li>
-                    <li>
-                        <a href="#">Thẻ nhớ</a>
-                    </li>
+                   
 					</ul>
 					<ul class="nav navbar-nav navbar-right">
-						<li>
-					
-						</li>
 						 <li><a href="./login.html">Đăng Nhập</a></li>
 						 <li><a href="./postnew.html">Đăng Tin</a></li>
 						
-                </ul>
+					</ul>
                         <!--<li><a href="#">Đăng Nhập</a></li>
                     </ul>
             </div>
             <!-- /.navbar-collapse -->
-        
+        </div>
 		</div>
         <!-- /.container -->
     </nav>
@@ -112,61 +133,18 @@
                     <a href="#" class="list-group-item">Tai nghe AKG</a>
                     <a href="#" class="list-group-item">Tai nghe xiaomi</a>
 					<a href="#" class="list-group-item">Tai nghe sony</a>
-					<a href="#" class="list-group-item">Loa BMB</a>
-					<a href="#" class="list-group-item">Loa JBL</a>
                 </div>
             </div>
 
-            <div class="col-md-9 col-md-12 col-xs-12 thumbnail">
+            <div class="col-md-9" >
+			<h4>Kết quả tìm kiếm</h4>
+			<div id="ketqua" class="row">
+ <!-- /container -->
 
-                    <!--<img class="img-responsive" src="http://placehold.it/800x300" alt="">-->
-					<!--<div class="container">-->
-					<h3 style="margin-left:2%; font-size:30px"><p>Đăng bán sản phẩm</p></h3>
-					<hr>
-					<div class="col-md-6 col-sm-12 col-xs-12">
-					<div style="font-size:25px; font-family:times new roman; margin-top:10px;;"class="form-title"><p>Thông tin người bán</p></div>
-					<input style="margin-bottom:5px;" type="text" placeholder="Nhập tên" class="form-control" required="">
-					<input style="margin-bottom:5px;" type="tel" placeholder="Nhập số điện thoại" class="form-control" required="">
-					<input style="margin-bottom:5px;" type="text" placeholder="Nhập địa chỉ" class="form-control" required="">
-					<div style="font-size:25px; font-family:times new roman; margin-top:10px;;"class="form-title"><p>Nội dung tin</p></div>
-					<div class="input-group-btn">
-                    <button style="text-align:left; margin-bottom:5px;" id="cbSearchCategory1" name="category" class="btn btn-default dropdown-toggle col-md-7.5" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Chọn loại thiết bị âm thanh cần bán <span class="caret"></span></button>
-                    <ul style="margin-left:3%;" class="dropdown-menu columns" aria-labelledby="cbSearchCategory">
-                        <li><a onclick="$('#cbSearchCategory1').html('Chọn loại thiết bị âm thanh cần bán<span class=&quot;caret&quot;></span>')">Loại thiết bị</a></li>
-						<li><a onclick="$('#cbSearchCategory1').html('Tai nghe Sony <span class=&quot;caret&quot;></span>')">Tai nghe Sony</a></li>
-                        <li><a onclick="$('#cbSearchCategory1').html('Phụ Kiện>Khác <span class=&quot;caret&quot;></span>')">Phụ Kiện &gt; Khác</a></li>
-                    </ul>
-					</div>
-					<input style="margin-bottom:5px;" type="text" placeholder="Nhập tiêu đề" class="form-control" required="">
-					<input style="margin-bottom:5px;" type="text" placeholder="Nhập thông tin sản phẩm" class="form-control" required="">
-					<input style="margin-bottom:5px;" type="text" name="money" placeholder="Nhập giá tiền cần bán" class="form-control" required="">
-					<p style="margin-bottom:5px;">Hình ảnh: </p>
-					
-					<input style="margin-bottom:5px;" tabindex="-1" data-sequence="0" type="file" multiple="multiple" size="1" class="thumb-camera sprite_ai_camera" id="image_0" style="display: block; cursor: pointer;">
-					<div class="form-group">
-					<button style="background-color:#337ab7; color:white; margin-bottom:5px" type="submit" class="btn _2eyhSZKQv1uz_RH2pfHrg3 col-md-12 col-sm-12 col-xs-12">ĐĂNG TIN</button>
-					
-					<div class="caption-full">
-                        </div>
-                    <div class="ratings">
-                                                 
-                        </p>
-                    </div>
-					
-
-                </div>
-				
-
-            </div>
-
-        </div>
-
-    </div>
-	
-	</div>
-    <!-- /container -->
-
-
+			</div>
+			</div>
+			</div>
+			</div>
     <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
     <script src="../../assets/js/ie10-viewport-bug-workaround.js"></script>
   
@@ -180,7 +158,7 @@
         <footer>
             <div class="row">
                 <div class="col-lg-12">
-                    <!--<p>Updating....</p>-->
+                    <p>Updating....</p>
                 </div>
             </div>
         </footer>
