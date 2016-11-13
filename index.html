@@ -33,7 +33,7 @@ var products = [
 		];
 		<!-- END Tao ra danh sach san pham -->
 		
-		<!-- Khi trang web dang duoc load thi se chay code ben duoi -->
+		<!-- Funtine timmiem-->
 		function timkiem()
 		{
 			
@@ -57,31 +57,31 @@ var products = [
     <!-- Navigation -->
 	<!--Search-->
 	<div class="navbar navbar-default " role="navigation">
-    <div class="container">
-	<div class="row">
-	<div class="col-md-12">
-        <!--<form action="./search.html">-->
-            <div class="input-group">
-                <div class="input-group-btn">
-                    <button id="cbSearchCategory" name="category" class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
-                        Tất Cả <span class="caret"></span>
-                    </button>
-                    <ul class="dropdown-menu columns" aria-labelledby="cbSearchCategory">
-                        <li><a onclick="$('#cbSearchCategory').html('Tất Cả <span class=&quot;caret&quot;></span>')">Tất Cả</a></li>
-                              <li><a onclick="$('#cbSearchCategory').html('Phụ Kiện>Khác <span class=&quot;caret&quot;></span>')">Phụ Kiện &gt; Khác</a></li>
-                    </ul>
-                </div>
-                <input type="text" class="form-control" autofocus="true" placeholder="Tìm kiếm theo tên sản phẩm..." name="keyword" id="keyword">
-                
-				<div class="input-group-btn">
-                    <button class="btn btn-default" type="submit" onclick="timkiem()"><i class="glyphicon glyphicon-search"></i></button>
-                </div>
-				
-            </div>
-        <!--</form>-->
-	</div>
-	</div>
-	</div>
+		<div class="container">
+			<div class="row">
+				<div class="col-md-12">
+					<!--<form action="./search.html">-->
+					<div class="input-group">
+						<div class="input-group-btn">
+							<button id="cbSearchCategory" name="category" class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+								Tất Cả <span class="caret"></span>
+							</button>
+							<ul class="dropdown-menu columns" aria-labelledby="cbSearchCategory">
+								<li><a onclick="$('#cbSearchCategory').html('Tất Cả <span class=&quot;caret&quot;></span>')">Tất Cả</a></li>
+									  <li><a onclick="$('#cbSearchCategory').html('Phụ Kiện>Khác <span class=&quot;caret&quot;></span>')">Phụ Kiện &gt; Khác</a></li>
+							</ul>
+						</div>
+						<input type="text" class="form-control" autofocus="true" placeholder="Tìm kiếm theo tên sản phẩm..." name="keyword" id="keyword">
+						
+						<div class="input-group-btn">
+							<button class="btn btn-default" type="submit" onclick="timkiem()"><i class="glyphicon glyphicon-search"></i></button>
+						</div>
+						
+					</div>
+					<!--</form>-->
+				</div>
+			</div>
+		</div>
 	</div>
 	
 	<nav  style="background-color: black;" class="navbar navbar-inverse navbar-fixed-top" role="navigation">
@@ -118,12 +118,9 @@ var products = [
 						 <li><a href="./postnew.html">Đăng Tin</a></li>
 						
 					</ul>
-                        <!--<li><a href="#">Đăng Nhập</a></li>
-                    </ul>
             </div>
             <!-- /.navbar-collapse -->
         </div>
-		</div>
         <!-- /.container -->
     </nav>
 
@@ -217,11 +214,8 @@ var products = [
                     </div>
 
                 </div>
-				
-
-        </div>
-
-    </div>
+			</div>
+		</div>
 	</div>
     <!-- /.container -->
 
