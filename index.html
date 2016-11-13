@@ -30,10 +30,23 @@ var products = [
 		"./images/tainghe3.jpg",
 		"./images/tainghe4.jpg",
 		"./images/tainghe5.jpg",
+		"./images/loa1.png",
+		"./images/loa2.png",
+		"./images/loa3.png",
+		"./images/loa4.jpg",
+		"./images/thenho1.jpg",
+		"./images/thenho2.jpg",
+		"./images/thenho3.jpg",
+		"./images/thenho4.jpg",
 		];
 		<!-- END Tao ra danh sach san pham -->
 		
+<<<<<<< HEAD
 		<!-- Funtine timmiem-->
+=======
+		<!-- Khi trang web dang duoc load thi se chay code ben duoi -->
+		
+>>>>>>> origin/master
 		function timkiem()
 		{
 			
@@ -42,10 +55,29 @@ var products = [
 			if(keyword == "tainghe" || keyword == "tai nghe")
 			{
 				
-				<!--result += "<img class='col-md-3 col-sm-6 col-xs-12 thumbnail img-responsive' src='" + products[0] + "'>";--> 
-				result += "<a class='col-md-3 col-sm-6 col-xs-12 img-responsive' href=''> <img class='img-responsive' src='" +products[0] + "'style='width:200px; height:200px; border:2px solid;'></a>"
-				result += "<img class='col-md-3 col-sm-6 col-xs-12 thumbnail img-responsive' src='" + products[1] + "'>";
-				result += "<img class='col-md-3 col-sm-6 col-xs-12 thumbnail img-responsive' src='" + products[2] + "'>";				
+				result += "<img class='col-md-3 col-sm-6 col-xs-12 thumbnail img-responsive' src='" + products[0] + "'style='width:200px; height:200px; border:2px solid;'></a>";
+				result += "<img class='col-md-3 col-sm-6 col-xs-12 thumbnail img-responsive' src='" + products[1] + "'style='width:200px; height:200px; border:2px solid;'></a>";
+				result += "<img class='col-md-3 col-sm-6 col-xs-12 thumbnail img-responsive' src='" + products[2] + "'style='width:200px; height:200px; border:2px solid;'></a>";	
+				result += "<img class='col-md-3 col-sm-6 col-xs-12 thumbnail img-responsive' src='" + products[3] + "'style='width:200px; height:200px; border:2px solid;'></a>";
+				result += "<img class='col-md-3 col-sm-6 col-xs-12 thumbnail img-responsive' src='" + products[4] + "'style='width:200px; height:200px; border:2px solid;'></a>";				
+			}
+			if(keyword == "loa")
+			{
+				
+				result += "<img class='col-md-3 col-sm-6 col-xs-12 thumbnail img-responsive' src='" + products[5] + "'style='width:200px; height:200px; border:2px solid;'></a>";
+				result += "<img class='col-md-3 col-sm-6 col-xs-12 thumbnail img-responsive' src='" + products[6] + "'style='width:200px; height:200px; border:2px solid;'></a>";
+				result += "<img class='col-md-3 col-sm-6 col-xs-12 thumbnail img-responsive' src='" + products[7] + "'style='width:200px; height:200px; border:2px solid;'></a>";	
+				result += "<img class='col-md-3 col-sm-6 col-xs-12 thumbnail img-responsive' src='" + products[8] + "'style='width:200px; height:200px; border:2px solid;'></a>";
+						
+			}
+			if(keyword == "thenho" || keyword == "the nho")
+			{
+				
+				result += "<img class='col-md-3 col-sm-6 col-xs-12 thumbnail img-responsive' src='" + products[9] + "'style='width:200px; height:200px; border:2px solid;'></a>";
+				result += "<img class='col-md-3 col-sm-6 col-xs-12 thumbnail img-responsive' src='" + products[10] + "'style='width:200px; height:200px; border:2px solid;'></a>";
+				result += "<img class='col-md-3 col-sm-6 col-xs-12 thumbnail img-responsive' src='" + products[11] + "'style='width:200px; height:200px; border:2px solid;'></a>";	
+				result += "<img class='col-md-3 col-sm-6 col-xs-12 thumbnail img-responsive' src='" + products[12] + "'style='width:200px; height:200px; border:2px solid;'></a>";
+						
 			}
 			document.getElementById("ketqua").innerHTML=result;		
 		}
@@ -57,6 +89,7 @@ var products = [
     <!-- Navigation -->
 	<!--Search-->
 	<div class="navbar navbar-default " role="navigation">
+<<<<<<< HEAD
 		<div class="container">
 			<div class="row">
 				<div class="col-md-12">
@@ -82,6 +115,33 @@ var products = [
 				</div>
 			</div>
 		</div>
+=======
+    <div class="container">
+	<div class="row"> 
+	<div class="col-md-12">
+        <!--<form action="./search.html">-->
+            <div class="input-group">
+                <div class="input-group-btn">
+                    <button id="cbSearchCategory" name="category" class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                        Tất Cả <span class="caret"></span>
+                    </button>
+                    <ul class="dropdown-menu columns" aria-labelledby="cbSearchCategory">
+                        <li><a onclick="$('#cbSearchCategory').html('Tất Cả <span class=&quot;caret&quot;></span>')">Tất Cả</a></li>
+                              <li><a onclick="$('#cbSearchCategory').html('Phụ Kiện>Khác <span class=&quot;caret&quot;></span>')">Phụ Kiện &gt; Khác</a></li>
+                    </ul>
+                </div>
+                <input type="text" class="form-control" autofocus="true" placeholder="Tìm kiếm theo tên sản phẩm..." name="keyword" id="keyword">
+                
+				<div class="input-group-btn">
+                    <button class="btn btn-default" type="submit" onclick="timkiem()"><i class="glyphicon glyphicon-search"></i></button>
+                </div>
+				
+            </div>
+        <!--</form>-->
+	</div>
+	</div>
+	</div>
+>>>>>>> origin/master
 	</div>
 	
 	<nav  style="background-color: black;" class="navbar navbar-inverse navbar-fixed-top" role="navigation">
@@ -127,7 +187,7 @@ var products = [
     <!-- Page Content -->
     <div class="container">
 
-        <div class="row">
+        <div class="row" id="ketqua">  
 
             <div class="col-md-3 col-sm-12 col-xs-12">
                 <div class="list-group">
