@@ -133,11 +133,17 @@
 					<input type="checkbox" id="rememberMe" checked="">
 					Ghi nhớ tài khoản
 					<div class="form-group">
+
 					<button id='login' style="background-color:#337ab7; color:white; margin-bottom:5px;" type="submit" class="btn _2eyhSZKQv1uz_RH2pfHrg3 col-md-12 col-sm-12 col-xs-12">Đăng nhập</button>
 					</form>
                     <form action="./register.php">				
                     <button style="background-color:#337ab7; color:white; margin-bottom:5px;" type="submit" class="btn col-md-12 col-sm-12 col-xs-12">Đăng Ký</button>
 					
+
+					<button style="background-color:#337ab7; color:white; margin-bottom:5px;" type="submit" class="btn col-md-12 col-sm-12 col-xs-12">Đăng nhập</button>
+					<form action="./register.html">
+						<button style="background-color:#337ab7; color:white; margin-bottom:5px;" type="submit" class="btn col-md-12 col-sm-12 col-xs-12">Đăng Ký</button>
+
 					</form>
 					</div>
 					</div>
