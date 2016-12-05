@@ -1,3 +1,8 @@
+<?php 
+    include 'function.php';
+    if(!isset($_COOKIE['isLogin']))
+        header('location:login.php');
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -66,7 +71,7 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="nav-brand img-responsive" href="./index.html"><img src="./images/logo.jpg" style="width:130px; height:52px;"></a>
+                <a class="nav-brand img-responsive" href="./index.php"><img src="./images/logo.jpg" style="width:130px; height:52px;"></a>
             </div>
             <!-- Collect the nav links, forms, and other content for toggling -->
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
@@ -88,8 +93,10 @@
 						<li>
 					
 						</li>
-						 <li><a href="./login.html">Đăng Nhập</a></li>
-						 <li><a href="./postnew.html">Đăng Tin</a></li>
+						<?php
+                            checkLogin();
+                        ?>
+						<li><a href="./postnew.php">Đăng Tin</a></li>
 						
                 </ul>
                         <!--<li><a href="#">Đăng Nhập</a></li>

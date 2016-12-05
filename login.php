@@ -1,4 +1,12 @@
+<?php
+    if(isset($_COOKIE['isLogin']))
+        header('location:index.php');
+    include 'function.php';
+    chuyenHuongDangNhap();
+?>
+
 <!DOCTYPE html>
+
 <html lang="en">
 
 <head>
@@ -65,7 +73,7 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="nav-brand img-responsive" href="./index.html"><img src="./images/logo.jpg" style="width:130px; height:52px;"></a>
+                <a class="nav-brand img-responsive" href="./index.php"><img src="./images/logo.jpg" style="width:130px; height:52px;"></a>
             </div>
             <!-- Collect the nav links, forms, and other content for toggling -->
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
@@ -84,17 +92,13 @@
                     </li>
 					</ul>
 					<ul class="nav navbar-nav navbar-right">
-						 <li><a href="./login.html">Đăng Nhập</a></li>
-						 <li><a href="./postnew.html">Đăng Tin</a></li>
+						 <li><a href="./login.php">Đăng Nhập</a></li>
+						 <li><a href="./postnew.php">Đăng Tin</a></li>
 						
 					</ul>
-                        <!--<li><a href="#">Đăng Nhập</a></li>
-                    </ul>
-            </div>
-            <!-- /.navbar-collapse -->
+                        
         </div>
 		</div>
-        <!-- /.container -->
     </nav>
 
     <!-- Page Content -->
@@ -118,21 +122,21 @@
                 <div class="col-md-8 col-sm-12 col-xs-12 thumbnail">
                     <!--<img class="img-responsive" src="http://placehold.it/800x300" alt="">-->
 					<!--<div class="container">-->
-
-					<div style="text-align:center; font-size:25px; font-family:times new roman; margin-top:20px;;"class="form-title" data-reactid=".1w2tqofzk74.1.1.0.0.0.2"><b>ĐĂNG NHẬP</b></div>
+                    <form action="" method="POST">
+					<div style="text-align:center; font-size:25px; font-family:times new roman; margin-top:20px;;"class="form-title"><b>ĐĂNG NHẬP</b></div>
 					<hr>
 					<div class="col-md-3"></div>
 					<div class="col-md-6">
-					<input style="margin-bottom:5px" type="tel" placeholder="Nhập số điện thoại" class="form-control" required="" data-reactid=".1w2tqofzk74.1.1.0.0.0.4.2">
-					<input style="margin-bottom:5px" type="password" placeholder="Nhập mật khẩu" class="form-control" required="" data-reactid=".1w2tqofzk74.1.1.0.0.0.4.3">
+					<input name="tel" style="margin-bottom:5px" type="tel" placeholder="Nhập số điện thoại" class="form-control" required="">
+					<input name="password" style="margin-bottom:5px" type="password" placeholder="Nhập mật khẩu" class="form-control" required="">
 					<div class="form-group">
 					<input type="checkbox" id="rememberMe" checked="">
 					Ghi nhớ tài khoản
 					<div class="form-group">
-					<button style="background-color:#337ab7; color:white; margin-bottom:5px;" type="submit" class="btn _2eyhSZKQv1uz_RH2pfHrg3 col-md-12 col-sm-12 col-xs-12">Đăng nhập</button>
-					<form action="./register.html">
-					
-					<button style="background-color:#337ab7; color:white; margin-bottom:5px;" type="submit" class="btn col-md-12 col-sm-12 col-xs-12">Đăng Ký<button>
+					<button id='login' style="background-color:#337ab7; color:white; margin-bottom:5px;" type="submit" class="btn _2eyhSZKQv1uz_RH2pfHrg3 col-md-12 col-sm-12 col-xs-12">Đăng nhập</button>
+					</form>
+                    <form action="./register.php">				
+                    <button style="background-color:#337ab7; color:white; margin-bottom:5px;" type="submit" class="btn col-md-12 col-sm-12 col-xs-12">Đăng Ký</button>
 					
 					</form>
 					</div>

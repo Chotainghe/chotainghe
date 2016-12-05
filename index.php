@@ -1,3 +1,6 @@
+<?php 
+include 'function.php';
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -50,12 +53,12 @@ var products = [
 			var keyword = document.getElementById("keyword").value;
 			if(keyword == "tainghe" || keyword == "tai nghe")
 			{
-				
-				result += "<img class='col-md-3 col-sm-6 col-xs-12 thumbnail img-responsive' src='" + products[0] + "'style='width:200px; height:200px; border:2px solid;'></a>";
-				result += "<img class='col-md-3 col-sm-6 col-xs-12 thumbnail img-responsive' src='" + products[1] + "'style='width:200px; height:200px; border:2px solid;'></a>";
-				result += "<img class='col-md-3 col-sm-6 col-xs-12 thumbnail img-responsive' src='" + products[2] + "'style='width:200px; height:200px; border:2px solid;'></a>";	
-				result += "<img class='col-md-3 col-sm-6 col-xs-12 thumbnail img-responsive' src='" + products[3] + "'style='width:200px; height:200px; border:2px solid;'></a>";
-				result += "<img class='col-md-3 col-sm-6 col-xs-12 thumbnail img-responsive' src='" + products[4] + "'style='width:200px; height:200px; border:2px solid;'></a>";				
+				result += "<h4>Kết quả tìm kiếm</h4>";
+				result += "<a class='col-md-3 col-sm-6 col-xs-12 thumbnail img-responsive' href=''> <img class='img-responsive' src='" +products[0] + "'style='width:200px; height:200px;'></a>"				
+				result += "<a class='col-md-3 col-sm-6 col-xs-12 thumbnail img-responsive' href=''> <img class='img-responsive' src='" +products[1] + "'style='width:200px; height:200px;'></a>"
+				result += "<a class='col-md-3 col-sm-6 col-xs-12 thumbnail img-responsive' href=''> <img class='img-responsive' src='" +products[2] + "'style='width:200px; height:200px;'></a>"
+				result += "<a class='col-md-3 col-sm-6 col-xs-12 thumbnail img-responsive' href=''> <img class='img-responsive' src='" +products[3] + "'style='width:200px; height:200px;'></a>"
+				result += "<a class='col-md-3 col-sm-6 col-xs-12 thumbnail img-responsive' href=''> <img class='img-responsive' src='" +products[4] + "'style='width:200px; height:200px;'></a>"
 			}
 			if(keyword == "loa")
 			{
@@ -122,7 +125,7 @@ var products = [
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="nav-brand img-responsive" href="./index.html"><img src="./images/logo.jpg" style="width:130px; height:52px;"></a>
+                <a class="nav-brand img-responsive" href="./index.php"><img src="./images/logo.jpg" style="width:130px; height:52px;"></a>
             </div>
             <!-- Collect the nav links, forms, and other content for toggling -->
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
@@ -142,13 +145,16 @@ var products = [
 				   
 				</ul>
 					<ul class="nav navbar-nav navbar-right">
-						 <li><a href="./login.html">Đăng Nhập</a></li>
-						 <li><a href="./postnew.html">Đăng Tin</a></li>
+					<?php
+						checkLogin();
+					?>
+					<li><a href="./postnew.php">Đăng Tin</a></li>
 						
 					</ul>
                         <!--<li><a href="#">Đăng Nhập</a></li>
                     </ul>
             </div>
+
             <!-- /.navbar-collapse -->
         </div>
 		</div>
@@ -158,7 +164,7 @@ var products = [
     <!-- Page Content -->
     <div class="container">
 
-        <div class="row" id="ketqua">  
+        <div class="row">  
 
             <div class="col-md-3 col-sm-12 col-xs-12">
                 <div class="list-group">
@@ -171,7 +177,7 @@ var products = [
                 </div>
             </div>
 
-            <div class="col-md-9">
+            <div class="col-md-9"  id="ketqua">
                 <div class="row">
                     <h4>Sản phẩm mới đăng gần đây</h4>
 					
@@ -197,43 +203,43 @@ var products = [
 					</a>
 					<h4>Sản phẩm đang bán</h4>
 					<a class="col-md-3 col-sm-6 col-xs-12 img-responsive" href="">
-					<img src="./images/tainghe1.jpg" style="width:200px; height:200px; border:2px solid;">
+					<img class = "img-responsive" src="./images/tainghe1.jpg" style="width:200px; height:200px; border:2px solid;">
 					<p>Tai nghe soul new 98%</p>
 					<p>Giá: liên hệ</p>
 					</a>
 					<a class="col-md-3 col-sm-6 col-xs-12 img-responsive" href="">
-					<img src="./images/tainghe.jpg" style="width:200px; height:200px; border:2px solid;">
+					<img class = "img-responsive" src="./images/tainghe.jpg" style="width:200px; height:200px; border:2px solid;">
 					<p>Tai nghe beats chính hãng new 98%</p>
 					<p>Giá: 1 củ</p>
 					</a>
 					<a class="col-md-3 col-sm-6 col-xs-12 img-responsive" href="">
-					<img src="./images/tainghe2.jpg" style="width:200px; height:200px; border:2px solid;">
+					<img class = "img-responsive" src="./images/tainghe2.jpg" style="width:200px; height:200px; border:2px solid;">
 					<p>Tai nghe beats chính hãng new 98%</p>
 					<p>Giá: 1 củ</p>
 					</a>
 					<a class="col-md-3 col-sm-6 col-xs-12 img-responsive" href="">
-					<img src="./images/tainghe3.jpg" style="width:200px; height:200px; border:2px solid;">
+					<img class = "img-responsive" src="./images/tainghe3.jpg" style="width:200px; height:200px; border:2px solid;">
 					<p>Tai nghe beats chính hãng new 98%</p>
 					<p>Giá: 1 củ</p>
 					</a>
 					<h4>Loa giá rẻ thanh lí</h4>
 					<a class="col-md-3 col-sm-6 col-xs-12 img-responsive" href="">
-					<img src="./images/loa1.png" style="width:200px; height:200px; border:2px solid;">
+					<img class = "img-responsive" src="./images/loa1.png" style="width:200px; height:200px; border:2px solid;">
 					<p>Loa BMB hết bảo hành </p>
 					<p>Giá: 600.000VND</p>
 					</a>
 					<a class="col-md-3 col-sm-6 col-xs-12 img-responsive" href="">
-					<img src="./images/loa2.png" style="width:200px; height:200px; border:2px solid;">
+					<img class = "img-responsive" src="./images/loa2.png" style="width:200px; height:200px; border:2px solid;">
 					<p>Loa BMB like new còn bảo hành</p>
 					<p>Giá: 1.5 triệu VND</p>
 					</a>
 					<a class="col-md-3 col-sm-6 col-xs-12 img-responsive" href="">
-					<img src="./images/loa3.png" style="width:200px; height:200px; border:2px solid;">
+					<img class = "img-responsive" src="./images/loa3.png" style="width:200px; height:200px; border:2px solid;">
 					<p>Loa JBL red hiếm 98%</p>
 					<p>Giá: 2.5 triệu VND</p>
 					</a>
 					<a class="col-md-3 col-sm-6 col-xs-12 img-responsive" href="">
-					<img src="./images/loa4.jpg" style="width:200px; height:200px; border:2px solid;">
+					<img class = "img-responsive" src="./images/loa4.jpg" style="width:200px; height:200px; border:2px solid;">
 					<p>Loa JBL mới mua nửa năm 97%</p>
 					<p>Giá: 1 triệu VND</p>
 					</a>

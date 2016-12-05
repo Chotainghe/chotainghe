@@ -1,3 +1,7 @@
+<?php 
+include 'function.php';
+chuyenHuongDangKy();
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -65,7 +69,7 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="nav-brand img-responsive" href="./index.html"><img src="./images/logo.jpg" style="width:130px; height:52px;"></a>
+                <a class="nav-brand img-responsive" href="./index.php"><img src="./images/logo.jpg" style="width:130px; height:52px;"></a>
             </div>
             <!-- Collect the nav links, forms, and other content for toggling -->
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
@@ -88,8 +92,8 @@
 						<li>
 					
 						</li>
-						 <li><a href="./login.html">Đăng Nhập</a></li>
-						 <li><a href="./postnew.html">Đăng Tin</a></li>
+						 <li><a href="./login.php">Đăng Nhập</a></li>
+						 <li><a href="./postnew.php">Đăng Tin</a></li>
 						
                 </ul>
 				 <ul class="nav navbar-nav navbar-right">
@@ -123,14 +127,14 @@
 			<div class="col-md-8 col-sm-12 col-xs-12 thumbnail">
                     <!--<img class="img-responsive" src="http://placehold.it/800x300" alt="">-->
 					<!--<div class="container">-->
-
+                    <form action="" method="POST">
 					<div style="text-align:center; font-size:25px; font-family:times new roman; margin-top:20px;;"class="form-title"><b>ĐĂNG KÝ</b></div>
 					<hr>
 					<div class="col-md-3"></div>
 					<div class="col-md-6">
-					<input style="margin-bottom:5px" type="text" placeholder="Nhập tên tài khoản" class="form-control">
-					<input style="margin-bottom:5px" type="tel" placeholder="Nhập số điện thoại" class="form-control">
-					<input type="password" placeholder="Nhập mật khẩu" class="form-control">
+					<input name="user" style="margin-bottom:5px" type="text" placeholder="Nhập tên tài khoản" class="form-control">
+					<input name="tel" style="margin-bottom:5px" type="tel" placeholder="Nhập số điện thoại" class="form-control">
+					<input name="password" type="password" placeholder="Nhập mật khẩu" class="form-control">
 					<div class="form-group">
 					<input type="checkbox" id="rememberMe" checked="">
 					Tôi đồng ý với các điều khoản sử dụng của chotainghe.com
@@ -139,6 +143,7 @@
 					</div>
 					</div>
 					</div>
+                    </form>
 					</div>
 					<div class="caption-full">
                         </div>
