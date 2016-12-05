@@ -33,10 +33,19 @@ var products = [
 		"./images/tainghe3.jpg",
 		"./images/tainghe4.jpg",
 		"./images/tainghe5.jpg",
+		"./images/loa1.png",
+		"./images/loa2.png",
+		"./images/loa3.png",
+		"./images/loa4.jpg",
+		"./images/thenho1.jpg",
+		"./images/thenho2.jpg",
+		"./images/thenho3.jpg",
+		"./images/thenho4.jpg",
 		];
 		<!-- END Tao ra danh sach san pham -->
 		
 		<!-- Khi trang web dang duoc load thi se chay code ben duoi -->
+		
 		function timkiem()
 		{
 			
@@ -68,12 +77,6 @@ var products = [
 				result += "<img class='col-md-3 col-sm-6 col-xs-12 thumbnail img-responsive' src='" + products[11] + "'style='width:200px; height:200px; border:2px solid;'></a>";	
 				result += "<img class='col-md-3 col-sm-6 col-xs-12 thumbnail img-responsive' src='" + products[12] + "'style='width:200px; height:200px; border:2px solid;'></a>";
 						
-
-				
-				<!--result += "<img class='col-md-3 col-sm-6 col-xs-12 thumbnail img-responsive' src='" + products[0] + "'>";--> 
-				result += "<a class='col-md-3 col-sm-6 col-xs-12 img-responsive' href=''> <img class='img-responsive' src='" +products[0] + "'style='width:200px; height:200px; border:2px solid;'></a>"
-				result += "<img class='col-md-3 col-sm-6 col-xs-12 thumbnail img-responsive' src='" + products[1] + "'>";
-				result += "<img class='col-md-3 col-sm-6 col-xs-12 thumbnail img-responsive' src='" + products[2] + "'>";				
 			}
 			document.getElementById("ketqua").innerHTML=result;		
 		}
@@ -86,7 +89,7 @@ var products = [
 	<!--Search-->
 	<div class="navbar navbar-default " role="navigation">
     <div class="container">
-	<div class="row">
+	<div class="row"> 
 	<div class="col-md-12">
         <!--<form action="./search.html">-->
             <div class="input-group">
@@ -148,7 +151,7 @@ var products = [
 					<li><a href="./postnew.php">Đăng Tin</a></li>
 						
 					</ul>
-                        <!--<li><a href="#">Đăng Nhập</a></li>-->
+                        <!--<li><a href="#">Đăng Nhập</a></li>
                     </ul>
             </div>
 
@@ -161,11 +164,7 @@ var products = [
     <!-- Page Content -->
     <div class="container">
 
-
         <div class="row">  
-
-        <div class="row">
-
 
             <div class="col-md-3 col-sm-12 col-xs-12">
                 <div class="list-group">

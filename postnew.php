@@ -130,12 +130,11 @@
 					<!--<div class="container">-->
 					<h3 style="margin-left:2%; font-size:30px"><p>Đăng bán sản phẩm</p></h3>
 					<hr>
-			<form action="createpost.php" method="get"> <!-- tạo form để get -->
 					<div class="col-md-6 col-sm-12 col-xs-12">
 					<div style="font-size:25px; font-family:times new roman; margin-top:10px;;"class="form-title"><p>Thông tin người bán</p></div>
-					<input style="margin-bottom:5px;" type="text" name="ten" placeholder="Nhập tên" class="form-control" required="">
-					<input style="margin-bottom:5px;" type="tel" name="sodienthoai" placeholder="Nhập số điện thoại" class="form-control" required="">
-					<input style="margin-bottom:5px;" type="text" name="diachi" placeholder="Nhập địa chỉ" class="form-control" required="">
+					<input style="margin-bottom:5px;" type="text" placeholder="Nhập tên" class="form-control" required="">
+					<input style="margin-bottom:5px;" type="tel" placeholder="Nhập số điện thoại" class="form-control" required="">
+					<input style="margin-bottom:5px;" type="text" placeholder="Nhập địa chỉ" class="form-control" required="">
 					<div style="font-size:25px; font-family:times new roman; margin-top:10px;;"class="form-title"><p>Nội dung tin</p></div>
 					<div class="input-group-btn">
                     <button style="text-align:left; margin-bottom:5px;" id="cbSearchCategory1" name="category" class="btn btn-default dropdown-toggle col-md-7.5" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Chọn loại thiết bị âm thanh cần bán <span class="caret"></span></button>
@@ -145,8 +144,8 @@
                         <li><a onclick="$('#cbSearchCategory1').html('Phụ Kiện>Khác <span class=&quot;caret&quot;></span>')">Phụ Kiện &gt; Khác</a></li>
                     </ul>
 					</div>
-					<input style="margin-bottom:5px;" type="text" name="tieude" placeholder="Nhập tiêu đề" class="form-control" required="">
-					<input style="margin-bottom:5px;" type="text" name="thongtin" placeholder="Nhập thông tin sản phẩm" class="form-control" required="">
+					<input style="margin-bottom:5px;" type="text" placeholder="Nhập tiêu đề" class="form-control" required="">
+					<input style="margin-bottom:5px;" type="text" placeholder="Nhập thông tin sản phẩm" class="form-control" required="">
 					<input style="margin-bottom:5px;" type="text" name="money" placeholder="Nhập giá tiền cần bán" class="form-control" required="">
 					<p style="margin-bottom:5px;">Hình ảnh: </p>
 					
@@ -160,11 +159,12 @@
                                                  
                         </p>
                     </div>
-					</div>
+					
+
+                </div>
 				
 
             </div>
-			</form>
 
         </div>
 
