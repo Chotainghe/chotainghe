@@ -2,6 +2,7 @@
     include 'function.php';
     if(!isset($_COOKIE['isLogin']))
         header('location:login.php');
+    chuyenHuongDangTin();
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -41,13 +42,13 @@
         <form action="/Post/Filter">
             <div class="input-group">
                 <div class="input-group-btn">
-                    <button id="cbSearchCategory" name="category" class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                    <button id="cbSearchCategory" class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
                         Tất Cả<span class="caret"></span>
                     </button>
                     <ul class="dropdown-menu columns" aria-labelledby="cbSearchCategory">
-                        <li><a onclick="$('#cbSearchCategory').html('Tất Cả <span class=&quot;caret&quot;></span>')">Tất Cả</a></li>
-						<li><a onclick="$('#cbSearchCategory').html('Tai nghe Sony <span class=&quot;caret&quot;></span>')">Tai nghe Sony</a></li>
-                        <li><a onclick="$('#cbSearchCategory').html('Phụ Kiện>Khác <span class=&quot;caret&quot;></span>')">Phụ Kiện &gt; Khác</a></li>
+                        <li><a name="category" onclick="$('#cbSearchCategory').html('Tất Cả <span class=&quot;caret&quot;></span>')">Tất Cả</a></li>
+						<li><a name="category" onclick="$('#cbSearchCategory').html('Tai nghe Sony <span class=&quot;caret&quot;></span>')">Tai nghe Sony</a></li>
+                        <li><a name="category" onclick="$('#cbSearchCategory').html('Phụ Kiện>Khác <span class=&quot;caret&quot;></span>')">Phụ Kiện &gt; Khác</a></li>
                     </ul>
                 </div>
                 <input type="text" class="form-control" autofocus="true" placeholder="Tìm kiếm theo tên sản phẩm..." name="keyword" id="keyword">
@@ -132,9 +133,10 @@
 					<hr>
 					<div class="col-md-6 col-sm-12 col-xs-12">
 					<div style="font-size:25px; font-family:times new roman; margin-top:10px;;"class="form-title"><p>Thông tin người bán</p></div>
-					<input style="margin-bottom:5px;" type="text" placeholder="Nhập tên" class="form-control" required="">
-					<input style="margin-bottom:5px;" type="tel" placeholder="Nhập số điện thoại" class="form-control" required="">
-					<input style="margin-bottom:5px;" type="text" placeholder="Nhập địa chỉ" class="form-control" required="">
+                    <form action="" method="POST">
+					<input name="user" style="margin-bottom:5px;" type="text" placeholder="Nhập tên" class="form-control" required=""  value=<?php info('name_account'); ?>>
+					<input name="tel" style="margin-bottom:5px;" type="tel" placeholder="Nhập số điện thoại" class="form-control" required=""  value=<?php info('phone_number'); ?>>
+					<input name="address" style="margin-bottom:5px;" type="text" placeholder="Nhập địa chỉ" class="form-control" required=""  value=<?php info('diachi'); ?>>
 					<div style="font-size:25px; font-family:times new roman; margin-top:10px;;"class="form-title"><p>Nội dung tin</p></div>
 					<div class="input-group-btn">
                     <button style="text-align:left; margin-bottom:5px;" id="cbSearchCategory1" name="category" class="btn btn-default dropdown-toggle col-md-7.5" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Chọn loại thiết bị âm thanh cần bán <span class="caret"></span></button>
@@ -144,14 +146,16 @@
                         <li><a onclick="$('#cbSearchCategory1').html('Phụ Kiện>Khác <span class=&quot;caret&quot;></span>')">Phụ Kiện &gt; Khác</a></li>
                     </ul>
 					</div>
-					<input style="margin-bottom:5px;" type="text" placeholder="Nhập tiêu đề" class="form-control" required="">
-					<input style="margin-bottom:5px;" type="text" placeholder="Nhập thông tin sản phẩm" class="form-control" required="">
-					<input style="margin-bottom:5px;" type="text" name="money" placeholder="Nhập giá tiền cần bán" class="form-control" required="">
+					<input name="pname" style="margin-bottom:5px;" type="text" placeholder="Nhập tên sản phẩm" class="form-control" required="">
+					<input name="content" style="margin-bottom:5px;" type="text" placeholder="Nhập nội dung" class="form-control" required="">
+					<input name="price" style="margin-bottom:5px;" type="text" name="money" placeholder="Nhập giá tiền cần bán" class="form-control" required="">
 					<p style="margin-bottom:5px;">Hình ảnh: </p>
 					
 					<input style="margin-bottom:5px;" tabindex="-1" data-sequence="0" type="file" multiple="multiple" size="1" class="thumb-camera sprite_ai_camera" id="image_0" style="display: block; cursor: pointer;">
 					<div class="form-group">
 					<button style="background-color:#337ab7; color:white; margin-bottom:5px" type="submit" class="btn _2eyhSZKQv1uz_RH2pfHrg3 col-md-12 col-sm-12 col-xs-12">ĐĂNG TIN</button>
+                    </div>
+                    </form>
 					
 					<div class="caption-full">
                         </div>

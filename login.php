@@ -127,11 +127,21 @@
 					<hr>
 					<div class="col-md-3"></div>
 					<div class="col-md-6">
-					<input name="tel" style="margin-bottom:5px" type="tel" placeholder="Nhập số điện thoại" class="form-control" required="">
-					<input name="password" style="margin-bottom:5px" type="password" placeholder="Nhập mật khẩu" class="form-control" required="">
+					<input name="tel" style="margin-bottom:5px" type="tel" placeholder="Nhập số điện thoại" class="form-control" required="" value=<?php if(isset($_COOKIE['tel']))
+                                    echo $_COOKIE['tel'];
+                          ?> >
+					<input name="password" style="margin-bottom:5px" type="password" placeholder="Nhập mật khẩu" class="form-control" required="" value=> 
 					<div class="form-group">
-					<input type="checkbox" id="rememberMe" checked="">
+					<input type="checkbox" id="rememberMe" <?php if(isset($_COOKIE['tel']))
+                                                                    echo "checked";
+                                                            ?>>
 					Ghi nhớ tài khoản
+                    <?php
+                        if(isset($_POST['tel']))
+                        {
+                            checkAccount();
+                        }
+                    ?>
 					<div class="form-group">
 					<button id='login' style="background-color:#337ab7; color:white; margin-bottom:5px;" type="submit" class="btn _2eyhSZKQv1uz_RH2pfHrg3 col-md-12 col-sm-12 col-xs-12">Đăng nhập</button>
 					</form>

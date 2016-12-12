@@ -1,4 +1,5 @@
-<?php
+<?php session_start();
 	setcookie('isLogin', 'true', time()-3600);
-	header('location:index.php');
+	session_destroy();
+	header('location:login.php');
 ?>
