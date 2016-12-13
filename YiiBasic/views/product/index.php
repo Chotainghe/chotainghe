@@ -21,8 +21,6 @@ $this->title = 'Danh mục sản phẩm';
     <?= ListView::widget([
         'dataProvider' => $dataProvider,
         'itemOptions' => ['class' => 'item'],
-        'itemView' => function ($model, $key, $index, $widget) {
-            //return Html::a(Html::encode($model->ID), ['view', 'id' => $model->ID]);
-            return Html::a(Html::encode($model->ProductName), ['view', 'id' => $model->ID]);},
+        'itemView' => 'list_item'
     ]) ?> 
 </div>
