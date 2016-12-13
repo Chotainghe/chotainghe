@@ -14,6 +14,8 @@ $this->params['breadcrumbs'][] = $this->title;
 
     <h1><?= Html::encode($this->title) ?></h1>
 
+
+<!--Create/Delete-->
     <!-- <p>
         <?= Html::a('Update', ['update', 'id' => $model->ID], ['class' => 'btn btn-primary']) ?>
         <?= Html::a('Delete', ['delete', 'id' => $model->ID], [
@@ -32,7 +34,7 @@ $this->params['breadcrumbs'][] = $this->title;
             'ProductName',
             'Price',
             'Category',
-            'ImageURL:url',
+            'ImageURL:image',
         ],
     ]) ?>
 

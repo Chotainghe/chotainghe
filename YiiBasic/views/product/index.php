@@ -22,14 +22,7 @@ $this->title = 'Danh mục sản phẩm';
         'dataProvider' => $dataProvider,
         'itemOptions' => ['class' => 'item'],
         'itemView' => function ($model, $key, $index, $widget) {
-            return Html::a(Html::encode($model->ID), ['view', 'id' => $model->ID]);
-            return Html::a(Html::encode($model->ProductName), ['view', 'Product' => $model->ProductName]);},
-
+            //return Html::a(Html::encode($model->ID), ['view', 'id' => $model->ID]);
+            return Html::a(Html::encode($model->ProductName), ['view', 'id' => $model->ID]);},
     ]) ?> 
-    <!-- <?= ListView::widget([
-        'dataProvider' => $dataProvider,
-        'itemOptions' => ['class' => 'item'],
-        'itemView' => function ($model, $key, $index, $widget) {
-            return Html::a(Html::encode($model->ProductName), ['view', 'ProductName' => $model->ProductName]); },
-    ]) ?> -->
 </div>

@@ -12,7 +12,7 @@ use yii\widgets\ActiveForm;
 
     <?php $form = ActiveForm::begin(); ?>
 
-    <?= $form->field($model, 'userID')->textInput() ?>
+    <!-- <?= $form->field($model, 'userID')->textInput() ?> -->
 
     <?= $form->field($model, 'ProductName')->textInput(['maxlength' => true]) ?>
 
@@ -20,8 +20,9 @@ use yii\widgets\ActiveForm;
 
     <?= $form->field($model, 'Category')->textInput(['maxlength' => true]) ?>
 
-    <?= $form->field($model, 'ImageURL')->textInput(['maxlength' => true]) ?>
 
+    <?= $form->field($model, 'ImageURL')->textInput(['maxlength' => true]) ?>
+    Past link ảnh vào ô trên
     <div class="form-group">
         <?= Html::submitButton($model->isNewRecord ? 'Create' : 'Update', ['class' => $model->isNewRecord ? 'btn btn-success' : 'btn btn-primary']) ?>
     </div>
