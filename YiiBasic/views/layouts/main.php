@@ -55,15 +55,32 @@ AppAsset::register($this);
         'class' => 'navbar-inverse navbar-fixed-top','stylle'=>'background-color:black',
         ],
         ]);
-    echo Nav::widget([
-        'options' => ['class' => 'navbar-nav navbar-left'],
-        'items' => [
-        ['label' => 'Tai Nghe', 'url' => ['#']],
-        ['label' => 'DAC-Ampli', 'url' => ['#']],
-        ['label' => 'Máy Nghe Nhạc', 'url' => ['#']],
-        ['label' => 'Loa Mini/Bluetooth', 'url' => ['#']],
-        ],
-        ]);
+    echo "<div class='navbar-nav navbar-left'>
+                <ul class='nav navbar-nav navbar-left'>
+                    <li>
+                    <a href='http://chotainghe.com/Yiibasic/web/index.php?r=product%2Findex&ProductSearch%5BProductName%5D=Tai+nghe'>Tai nghe</a>
+                    </li>
+                    <li>
+                    <a href='http://chotainghe.com/Yiibasic/web/index.php?r=product%2Findex&ProductSearch%5BProductName%5D=DAC Ampli'>DAC-Ampli</a>
+                    </li>
+                    <li>
+                    <a href='http://chotainghe.com/Yiibasic/web/index.php?r=product%2Findex&ProductSearch%5BProductName%5D=Loa mini Bluetooth'>Loa mini/Bluetooth</a>
+                    </li>
+                    <li>
+                    <a href='http://chotainghe.com/Yiibasic/web/index.php?r=product%2Findex&ProductSearch%5BProductName%5D=the nho'>Thẻ nhớ</a>
+                    </li>
+                   
+                </ul>
+            </div>";
+    // echo Nav::widget([
+    //     'options' => ['class' => 'navbar-nav navbar-left'],
+    //     'items' => [
+    //     ['label' => 'Tai Nghe', 'url' => ['#']],
+    //     ['label' => 'DAC-Ampli', 'url' => ['#']],
+    //     ['label' => 'Máy Nghe Nhạc', 'url' => ['#']],
+    //     ['label' => 'Loa Mini/Bluetooth', 'url' => ['#']],
+    //     ],
+    //     ]);
     echo Nav::widget([
         'options' => ['class' => 'navbar-nav navbar-right'],
         'items' => [
