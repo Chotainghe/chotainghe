@@ -30,68 +30,63 @@ AppAsset::register($this);
 
     <!-- Custom CSS -->
     <link href="css/shop-item.css" rel="stylesheet">
-   <style>
-    .navbar-brand{
-    padding-top:0px; padding-left:0px;
-    }
-    .navbar-inverse {
-    background-color: black;
-    border-color: #080808;
-    float: right;
-    }
-
+    <style>
+        .navbar-brand{
+            padding-top:0px; padding-left:0px;
+        }
+        .navbar-inverse {
+            background-color: black;
+            border-color: #080808;
+        }
+        .nav-list{
+            float: right;
+        }
     </style>
 </head>
 
 <body>
     <?php $this->beginBody() ?>    
-<?php
-NavBar::begin([
-    'brandLabel' => Html::img('@web/images/logo.jpg',['width'=>'150px'],
-       ['alt'=>Yii::$app->name]),
-    'brandUrl' => Yii::$app->homeUrl,
-    'options' => [
-    'class' => 'navbar-inverse navbar-fixed-top','stylle'=>'background-color:black',
-    ],
-    ]);
-echo Nav::widget([
-    'options' => ['class' => 'navbar-nav navbar-left'],
-    'items' => [
-    ['label' => 'Tai Nghe', 'url' => ['product/index']],
-    ['label' => 'DAC-Ampli', 'url' => ['#']],
-    ['label' => 'Máy Nghe Nhạc', 'url' => ['#']],
-    ['label' => 'Loa Mini/Bluetooth', 'url' => ['#']],
-    ],
-    ]);
-echo Nav::widget([
-    'options' => ['class' => 'navbar-nav navbar-right'],
-    'items' => [
-    Yii::$app->user->isGuest ? (
-        ['label' => 'Đăng nhập', 'url' => ['/site/login']]
-        ) : (
-        '<li>'
-        
-        . Html::beginForm(['/site/logout'], 'post')
-        . Html::submitButton(
-            'Đăng xuất (' . Yii::$app->user->identity->username . ')',
-            ['class' => 'btn btn-link logout']
-            )
-        . Html::endForm()
-       
-        . Html::beginForm(['/product/create'], 'post')
-        . Html::submitButton(
-            'Đăng Tin',
-            ['class' => 'btn btn-link']
-            )
-        . Html::endForm()
-        .'</li>'
-
-        )
+    <?php
+    NavBar::begin([
+        'brandLabel' => Html::img('@web/images/logo.jpg',['width'=>'150px'],
+         ['alt'=>Yii::$app->name]),
+        'brandUrl' => Yii::$app->homeUrl,
+        'options' => [
+        'class' => 'navbar-inverse navbar-fixed-top','stylle'=>'background-color:black',
         ],
         ]);
-NavBar::end();
-?>
-<!-- /.container -->
+    echo Nav::widget([
+        'options' => ['class' => 'navbar-nav navbar-left'],
+        'items' => [
+        ['label' => 'Tai Nghe', 'url' => ['product/index']],
+        ['label' => 'DAC-Ampli', 'url' => ['#']],
+        ['label' => 'Máy Nghe Nhạc', 'url' => ['#']],
+        ['label' => 'Loa Mini/Bluetooth', 'url' => ['#']],
+        ],
+        ]);
+    echo Nav::widget([
+        'options' => ['class' => 'navbar-nav navbar-right'],
+        'items' => [
+        Yii::$app->user->isGuest ? (
+            ['label' => 'Đăng nhập', 'url' => ['/site/login']]
+            ) : (
+            '<li>'
+            .Html::a(Html::submitButton('Đăng Tin',['class' => 'btn btn-link']),['/product/create'])
+            .'</li>'
+            .'<li>'
+            . Html::beginForm(['/site/logout'], 'post',['class' => 'navbar-form'])
+            . Html::submitButton(
+                'Đăng xuất (' . Yii::$app->user->identity->username . ')',
+                ['class' => 'btn btn-link logout']
+                )   
+            . Html::endForm()
+            .'</li>'
+            ),
+            ],
+            ]);
+    NavBar::end();
+    ?>
+    <!-- /.container -->
 </nav>
 <!-- Page Content -->
 <div class="container">
