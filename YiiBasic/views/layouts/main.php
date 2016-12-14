@@ -58,7 +58,7 @@ AppAsset::register($this);
     echo Nav::widget([
         'options' => ['class' => 'navbar-nav navbar-left'],
         'items' => [
-        ['label' => 'Tai Nghe', 'url' => ['product/index']],
+        ['label' => 'Tai Nghe', 'url' => ['#']],
         ['label' => 'DAC-Ampli', 'url' => ['#']],
         ['label' => 'Máy Nghe Nhạc', 'url' => ['#']],
         ['label' => 'Loa Mini/Bluetooth', 'url' => ['#']],
@@ -71,12 +71,17 @@ AppAsset::register($this);
             ['label' => 'Đăng nhập', 'url' => ['/site/login']]
             ) : (
             '<li>'
-            .Html::a(Html::submitButton('Đăng Tin',['class' => 'btn btn-link']),['/product/create'])
+           . Html::beginForm(['/site/postnew'], 'post')
+            . Html::submitButton(
+                'Đăng Tin',
+                ['class' => 'btn btn-link logout']
+                )   
+            . Html::endForm()
             .'</li>'
             .'<li>'
-            . Html::beginForm(['/site/logout'], 'post',['class' => 'navbar-form'])
+            . Html::beginForm(['/site/logout'], 'post')
             . Html::submitButton(
-                'Đăng xuất (' . Yii::$app->user->identity->username . ')',
+                'Đăng Xuất (' . Yii::$app->user->identity->username . ')',
                 ['class' => 'btn btn-link logout']
                 )   
             . Html::endForm()
@@ -94,12 +99,12 @@ AppAsset::register($this);
 
         <div class="col-md-3 col-sm-12 col-xs-12">
             <div class="list-group">
-                <a href="#" class="list-group-item active">Tất cả</a>
-                <a href="#" class="list-group-item">Tai nghe AKG</a>
-                <a href="#" class="list-group-item">Tai nghe xiaomi</a>
-                <a href="#" class="list-group-item">Tai nghe sony</a>
-                <a href="#" class="list-group-item">Loa BMB</a>
-                <a href="#" class="list-group-item">Loa JBL</a>
+                <a href="http://chotainghe.com/Yiibasic/web/index.php#" class="list-group-item active">Tất cả</a>
+                <a href="http://chotainghe.com/Yiibasic/web/index.php?r=product%2Findex&ProductSearch%5BProductName%5D=Tai+nghe+akg" class="list-group-item">Tai nghe AKG</a>
+                <a href="http://chotainghe.com/Yiibasic/web/index.php?r=product%2Findex&ProductSearch%5BProductName%5D=Tai+nghe+xiaomi" class="list-group-item">Tai nghe xiaomi</a>
+                <a href="http://chotainghe.com/Yiibasic/web/index.php?r=product%2Findex&ProductSearch%5BProductName%5D=Tai+nghe+sony" class="list-group-item">Tai nghe sony</a>
+                <a href="http://chotainghe.com/Yiibasic/web/index.php?r=product%2Findex&ProductSearch%5BProductName%5D=Loa+BMB" class="list-group-item">Loa BMB</a>
+                <a href="http://chotainghe.com/Yiibasic/web/index.php?r=product%2Findex&ProductSearch%5BProductName%5D=Loa+JBL" class="list-group-item">Loa JBL</a>
             </div>
         </div>
 
@@ -113,11 +118,11 @@ AppAsset::register($this);
             </div>
 
             <footer class="footer">
-                <div class="container">
+                <!-- <div class="container">
                     <p class="pull-left">&copy; My Company <?= date('Y') ?></p>
 
                     <p class="pull-right"><?= Yii::powered() ?></p>
-                </div>
+                </div> -->
             </footer>
 
             <?php $this->endBody() ?>

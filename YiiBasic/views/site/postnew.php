@@ -6,7 +6,7 @@ use yii\widgets\ActiveForm;
 /* @var $this yii\web\View */
 /* @var $model app\models\Postnew */
 /* @var $form ActiveForm */
-$this->title = 'Postnew';
+$this->title = 'Đăng mới sản phẩm';
 $this->params['breadcrumbs'][] = $this->title;
 ?>
 <div class="site-postnew">

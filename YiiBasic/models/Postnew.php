@@ -50,11 +50,11 @@ class Postnew extends \yii\db\ActiveRecord
     {
         return [
             'ID' => 'ID',
-            'userID' => 'User ID',
-            'ProductName' => 'Product Name',
-            'Price' => 'Price',
-            'Category' => 'Category',
-            'ImageURL' => 'Image Url',
+            'userID' => 'Số điện thoại',
+            'ProductName' => 'Tên sản phẩm',
+            'Price' => 'Giá',
+            'Category' => 'Danh mục',
+            'ImageURL' => 'Link hình ảnh',
         ];
     }
     public function postnew()
