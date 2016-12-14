@@ -51,13 +51,13 @@ class Postnew extends \yii\db\ActiveRecord
     public function attributeLabels()
     {
         return [
-            'ID' => 'ID',
-            'userID' => 'User ID',
-            'ProductName' => 'Product Name',
-            'Price' => 'Price',
-            'Category' => 'Category',
-            'ImageURL' => 'Image Url',
-            'Detail' => 'Detail',
+            'ID' => 'Mã Sản Phẩm',
+            'userID' => 'Mã Người Dùng (Số Điện Thoại)',
+            'ProductName' => 'Tên Sản Phẩm',
+            'Price' => 'Giá',
+            'Category' => 'Danh Mục',
+            'ImageURL' => 'Link Ảnh',
+            'Detail' => 'Mô tả',
         ];
     }
     public function postnew()

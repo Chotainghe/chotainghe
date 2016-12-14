@@ -6,12 +6,11 @@ use yii\widgets\ActiveForm;
 /* @var $this yii\web\View */
 /* @var $model app\models\Postnew */
 /* @var $form ActiveForm */
-$this->title = 'Postnew';
+$this->title = 'Đăng mới sản phẩm';
 $this->params['breadcrumbs'][] = $this->title;
 ?>
 <div class="site-postnew">
     <h1><?= Html::encode($this->title) ?></h1>
-    <p>Please fill out the following information</p>
 </div>
 <div class="postnew">
 
@@ -22,6 +21,7 @@ $this->params['breadcrumbs'][] = $this->title;
         <?= $form->field($model, 'Price') ?>
         <?= $form->field($model, 'Category') ?>
         <?= $form->field($model, 'ImageURL') ?>
+        <?= $form->field($model, 'Detail') ?>
     
         <div class="form-group">
             <?= Html::submitButton('Submit', ['class' => 'btn btn-primary']) ?>

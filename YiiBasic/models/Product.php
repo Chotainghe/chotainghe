@@ -14,6 +14,7 @@ use Yii;
  * @property string $Price
  * @property string $Category
  * @property string $ImageURL
+ * @property string $Detail
  */
 class Product extends \yii\db\ActiveRecord
 {
