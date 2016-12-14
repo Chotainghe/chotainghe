@@ -61,13 +61,13 @@ AppAsset::register($this);
                      <a href='http://chotainghe.com/Yiibasic/web/index.php?r=product%2Findex&ProductSearch%5BProductName%5D=Tai+nghe'>Tai nghe</a>
                      </li>
                      <li>
-                     <a href='http://chotainghe.com/Yiibasic/web/index.php?r=product%2Findex&ProductSearch%5BProductName%5D=DAC Ampli'>DAC-Ampli</a>
+                     <a href='http://chotainghe.com/Yiibasic/web/index.php?r=product%2Findex&ProductSearch%5BProductName%5D=DAC+Ampli'>DAC-Ampli</a>
                      </li>
                      <li>
-                     <a href='http://chotainghe.com/Yiibasic/web/index.php?r=product%2Findex&ProductSearch%5BProductName%5D=Loa mini Bluetooth'>Loa mini/Bluetooth</a>
+                     <a href='http://chotainghe.com/Yiibasic/web/index.php?r=product%2Findex&ProductSearch%5BProductName%5D=Loa+mini+Bluetooth'>Loa mini/Bluetooth</a>
                      </li>
                      <li>
-                     <a href='http://chotainghe.com/Yiibasic/web/index.php?r=product%2Findex&ProductSearch%5BProductName%5D=the nho'>Thẻ nhớ</a>
+                     <a href='http://chotainghe.com/Yiibasic/web/index.php?r=product%2Findex&ProductSearch%5BProductName%5D=the+nho'>Thẻ nhớ</a>
                      </li> 
                  </ul>
              </div>";
@@ -114,12 +114,12 @@ AppAsset::register($this);
 
         <div class="col-md-3 col-sm-12 col-xs-12">
             <div class="list-group">
-                <a href="#" class="list-group-item active">Tất cả</a>
-                <a href="#" class="list-group-item">Tai nghe AKG</a>
-                <a href="#" class="list-group-item">Tai nghe xiaomi</a>
-                <a href="#" class="list-group-item">Tai nghe sony</a>
-                <a href="#" class="list-group-item">Loa BMB</a>
-                <a href="#" class="list-group-item">Loa JBL</a>
+                <a href="http://chotainghe.com/Yiibasic/web/index.php?r=product%2Findex" class="list-group-item active">Tất cả</a>
+                <a href="http://chotainghe.com/Yiibasic/web/index.php?r=product%2Findex&ProductSearch%5BProductName%5D=tai+nghe+akg" class="list-group-item">Tai nghe AKG</a>
+                <a href="http://chotainghe.com/Yiibasic/web/index.php?r=product%2Findex&ProductSearch%5BProductName%5D=tai+nghe+xiaomi" class="list-group-item">Tai nghe xiaomi</a>
+                <a href="http://chotainghe.com/Yiibasic/web/index.php?r=product%2Findex&ProductSearch%5BProductName%5D=tai+nghe+sony" class="list-group-item">Tai nghe sony</a>
+                <a href="http://chotainghe.com/Yiibasic/web/index.php?r=product%2Findex&ProductSearch%5BProductName%5D=Loa+BMB" class="list-group-item">Loa BMB</a>
+                <a href="http://chotainghe.com/Yiibasic/web/index.php?r=product%2Findex&ProductSearch%5BProductName%5D=Loa+JBL" class="list-group-item">Loa JBL</a>
             </div>
         </div>
 
