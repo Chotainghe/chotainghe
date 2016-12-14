@@ -5,6 +5,7 @@ namespace app\controllers;
 use Yii;
 use app\models\Product;
 use app\models\ProductSearch;
+use app\models\AdminLogin;
 use yii\web\Controller;
 use yii\web\NotFoundHttpException;
 use yii\filters\VerbFilter;
@@ -35,13 +36,31 @@ class AdminController extends Controller
      */
     public function actionIndex()
     {
-        $searchModel = new ProductSearch();
+       /* $searchModel = new ProductSearch();
         $dataProvider = $searchModel->search(Yii::$app->request->queryParams);
 
         return $this->render('index', [
             'searchModel' => $searchModel,
             'dataProvider' => $dataProvider,
+        ]);*/
+        if (!Yii::$app->user->isGuest) {
+            return $this->goHome();
+        }
+
+        $model = new AdminLogin();
+        if ($model->load(Yii::$app->request->post()) && $model->login()) {
+            //return $this->goBack();
+            $searchModel = new ProductSearch();
+            $dataProvider = $searchModel->search(Yii::$app->request->queryParams);
+
+            return $this->render('index', [
+            'searchModel' => $searchModel,
+            'dataProvider' => $dataProvider,
         ]);
+        }
+        return $this->render('login', [
+            'model' => $model,
+            ]);
     }
 
     /**
@@ -52,7 +71,7 @@ class AdminController extends Controller
     public function actionView($id)
     {
         return $this->render('view', [
-            'model' => $this->findModel($id),
+           'model' => $this->findModel($id),
         ]);
     }
 
