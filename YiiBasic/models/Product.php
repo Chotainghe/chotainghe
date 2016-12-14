@@ -38,6 +38,7 @@ class Product extends \yii\db\ActiveRecord
             [['Price'], 'string', 'max' => 40],
             [['Category'], 'string', 'max' => 30],
             [['ImageURL'], 'string', 'max' => 100],
+            [['Detail'], 'string', 'max' => 500],
         ];
     }
 
@@ -54,6 +55,7 @@ class Product extends \yii\db\ActiveRecord
             'Price' => 'Giá (VND)',
             'Category' => 'Danh Mục',
             'ImageURL' => 'Hình Ảnh',
+            'Detail' => 'Mô Tả',
         ];
     }
 }

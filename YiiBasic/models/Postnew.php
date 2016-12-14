@@ -24,6 +24,7 @@ class Postnew extends \yii\db\ActiveRecord
     public $Category;
     public $Price;
     public $ImageURL;
+    public $Detail;
     public static function tableName()
     {
         return 'product';
@@ -40,6 +41,7 @@ class Postnew extends \yii\db\ActiveRecord
             [['Price'], 'string', 'max' => 40],
             [['Category'], 'string', 'max' => 30],
             [['ImageURL'], 'string', 'max' => 100],
+            [['Detail'], 'string', 'max' => 500],
         ];
     }
 
@@ -55,6 +57,7 @@ class Postnew extends \yii\db\ActiveRecord
             'Price' => 'Price',
             'Category' => 'Category',
             'ImageURL' => 'Image Url',
+            'Detail' => 'Detail',
         ];
     }
     public function postnew()
@@ -66,6 +69,7 @@ class Postnew extends \yii\db\ActiveRecord
             $user->ProductName = $this->ProductName;
             $user->Category = $this->Category;
             $user->Price = $this->Price;
+            $user->Detail = $this->Detail;
             $user->save();
             return $user;
         }
