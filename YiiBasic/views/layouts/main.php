@@ -71,18 +71,22 @@ AppAsset::register($this);
             ['label' => 'Đăng nhập', 'url' => ['/site/login']]
             ) : (
             '<li>'
-            .Html::a(Html::submitButton('Đăng Tin',['class' => 'btn btn-link']),['/product/create'])
-            .'</li>'
-            .'<li>'
-            . Html::beginForm(['/site/logout'], 'post',['class' => 'navbar-form'])
+            . Html::beginForm(['/site/logout'], 'post')
             . Html::submitButton(
-                'Đăng xuất (' . Yii::$app->user->identity->username . ')',
-                ['class' => 'btn btn-link logout']
-                )   
+            'Đăng xuất (' . Yii::$app->user->identity->username . ')',
+            ['class' => 'btn btn-link logout']
+            )
             . Html::endForm()
             .'</li>'
-            ),
-            ],
+            .'<li>'
+            . Html::beginForm(['/site/postnew'], 'post')
+            . Html::submitButton(
+            'Đăng tin',
+            ['class' => 'btn btn-link logout']
+            )
+            . Html::endForm()
+            .'</li>'
+            )]
             ]);
     NavBar::end();
     ?>
