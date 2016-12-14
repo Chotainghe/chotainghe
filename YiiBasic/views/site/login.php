@@ -35,7 +35,7 @@ $this->params['breadcrumbs'][] = $this->title;
         <div class="form-group">
             <div class="col-lg-offset-1 col-lg-11">
                 <?= Html::submitButton('Login', ['class' => 'btn btn-primary', 'name' => 'login-button']) ?><br><br>
-                <p>If you don't have an account. Please click <?= Html::a('Sign up', ['/site/signup']) ?> to create an new account</p><br>
+                <p>Nếu chưa có tài khoản,  <?= Html::a('nhấn vào đây để đăng kí', ['/site/signup']) ?> </p><br>
             </div>
         </div>
 

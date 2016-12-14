@@ -37,8 +37,9 @@ AppAsset::register($this);
     .navbar-inverse {
     background-color: black;
     border-color: #080808;
+    float: right;
     }
-        
+
     </style>
 </head>
 
@@ -69,13 +70,22 @@ echo Nav::widget([
         ['label' => 'Đăng nhập', 'url' => ['/site/login']]
         ) : (
         '<li>'
+        
         . Html::beginForm(['/site/logout'], 'post')
         . Html::submitButton(
             'Đăng xuất (' . Yii::$app->user->identity->username . ')',
             ['class' => 'btn btn-link logout']
             )
         . Html::endForm()
-        . '</li>'
+       
+        . Html::beginForm(['/product/create'], 'post')
+        . Html::submitButton(
+            'Đăng Tin',
+            ['class' => 'btn btn-link']
+            )
+        . Html::endForm()
+        .'</li>'
+
         )
         ],
         ]);
