@@ -9,17 +9,21 @@ use Yii;
  *
  * @property integer $ID
  * @property integer $userID
- * @property string $userPhone
  * @property string $ProductName
  * @property string $Price
  * @property string $Category
  * @property string $ImageURL
  */
-class Product extends \yii\db\ActiveRecord
+class Postnew extends \yii\db\ActiveRecord
 {
     /**
      * @inheritdoc
      */
+    public $userID;
+    public $ProductName;
+    public $Category;
+    public $Price;
+    public $ImageURL;
     public static function tableName()
     {
         return 'product';
@@ -31,9 +35,7 @@ class Product extends \yii\db\ActiveRecord
     public function rules()
     {
         return [
-            [['userID'], 'required'],
             [['userID'], 'integer'],
-           // [['userPhone'], 'string', 'max' => 11],
             [['ProductName'], 'string', 'max' => 200],
             [['Price'], 'string', 'max' => 40],
             [['Category'], 'string', 'max' => 30],
@@ -47,13 +49,27 @@ class Product extends \yii\db\ActiveRecord
     public function attributeLabels()
     {
         return [
-            'ID' => 'Mã Sản Phẩm',
-            'userID' => 'Mã Người Dùng',
-            //'userPhone' => 'Số Điện Thoại',
-            'ProductName' => 'Tên Sản Phẩm',
-            'Price' => 'Giá (VND)',
-            'Category' => 'Danh Mục',
-            'ImageURL' => 'Hình Ảnh',
+            'ID' => 'ID',
+            'userID' => 'User ID',
+            'ProductName' => 'Product Name',
+            'Price' => 'Price',
+            'Category' => 'Category',
+            'ImageURL' => 'Image Url',
         ];
     }
+    public function postnew()
+    {
+        if($this->validate())
+        {
+            $user = new Product();
+            $user->userID = $this->userID;
+            $user->ProductName = $this->ProductName;
+            $user->Category = $this->Category;
+            $user->Price = $this->Price;
+            $user->save();
+            return $user;
+        }
+        return null;
+    }
+
 }
