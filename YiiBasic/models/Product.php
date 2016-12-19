@@ -7,9 +7,9 @@ use Yii;
 /**
  * This is the model class for table "product".
  *
- * @property integer $ID
- * @property integer $userID
- * @property string $userPhone
+ * @property integer $id
+ * @property integer $user
+ * @property string $phone
  * @property string $ProductName
  * @property string $Price
  * @property string $Category
@@ -32,9 +32,9 @@ class Product extends \yii\db\ActiveRecord
     public function rules()
     {
         return [
-            [['userID'], 'required'],
-            [['userID'], 'integer'],
-           // [['userPhone'], 'string', 'max' => 11],
+            [['ID'], 'required'],
+            [['ID'], 'integer'],
+            [['phone'], 'string', 'max' => 11],
             [['ProductName'], 'string', 'max' => 200],
             [['Price'], 'string', 'max' => 40],
             [['Category'], 'string', 'max' => 30],
@@ -50,8 +50,8 @@ class Product extends \yii\db\ActiveRecord
     {
         return [
             'ID' => 'Mã Sản Phẩm',
-            'userID' => 'Mã Người Dùng',
-            //'userPhone' => 'Số Điện Thoại',
+            'id' => 'Mã Người Dùng',
+            'phone' => 'Số Điện Thoại',
             'ProductName' => 'Tên Sản Phẩm',
             'Price' => 'Giá (VND)',
             'Category' => 'Danh Mục',

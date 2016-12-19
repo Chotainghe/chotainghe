@@ -7,8 +7,8 @@ use Yii;
 /**
  * This is the model class for table "product".
  *
- * @property integer $ID
- * @property integer $userID
+ * @property integer $id
+ * @property integer $user
  * @property string $ProductName
  * @property string $Price
  * @property string $Category
@@ -19,12 +19,7 @@ class Postnew extends \yii\db\ActiveRecord
     /**
      * @inheritdoc
      */
-    public $userID;
-    public $ProductName;
-    public $Category;
-    public $Price;
-    public $ImageURL;
-    public $Detail;
+    public $image;
     public static function tableName()
     {
         return 'product';
@@ -36,12 +31,15 @@ class Postnew extends \yii\db\ActiveRecord
     public function rules()
     {
         return [
-            [['userID'], 'integer'],
+            [['user', 'phone', 'ProductName', 'Price', 'Category', 'ImageURL', 'Detail'], 'required'],
+            [['user'], 'integer'],
+            [['phone'], 'string', 'max' => 11],
             [['ProductName'], 'string', 'max' => 200],
-            [['Price'], 'string', 'max' => 40],
+            [['Price', ], 'string', 'max' => 40],
             [['Category'], 'string', 'max' => 30],
-            [['ImageURL'], 'string', 'max' => 100],
             [['Detail'], 'string', 'max' => 500],
+            [['ImageURL'], 'string', 'max' => 100],
+            [['image'], 'file'],
         ];
     }
 
@@ -51,29 +49,14 @@ class Postnew extends \yii\db\ActiveRecord
     public function attributeLabels()
     {
         return [
-            'ID' => 'Mã Sản Phẩm',
-            'userID' => 'Mã Người Dùng (Số Điện Thoại)',
+            'id' => 'Mã Người Dùng',
+            'phone' => 'Số điện thoại',
             'ProductName' => 'Tên Sản Phẩm',
             'Price' => 'Giá',
             'Category' => 'Danh Mục',
-            'ImageURL' => 'Link Ảnh',
+            'image' => 'Hình Ảnh',
             'Detail' => 'Mô tả',
         ];
-    }
-    public function postnew()
-    {
-        if($this->validate())
-        {
-            $user = new Product();
-            $user->userID = $this->userID;
-            $user->ProductName = $this->ProductName;
-            $user->Category = $this->Category;
-            $user->Price = $this->Price;
-            $user->Detail = $this->Detail;
-            $user->save();
-            return $user;
-        }
-        return null;
     }
 
 }

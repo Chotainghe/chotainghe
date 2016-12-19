@@ -28,10 +28,11 @@ class Account extends \yii\db\ActiveRecord implements \yii\web\IdentityInterface
     public function rules()
     {
         return [
-            [['username', 'password', 'authKey'], 'required'],
-            [['username'], 'string', 'max' => 11],
-            [['password'], 'string', 'max' => 32],
-            [['authKey'], 'string', 'max' => 60],
+            [['username', 'telephone', 'password', 'email'], 'required'],
+            [['username'], 'string', 'max' => 30],
+            [['password'], 'string', 'max' => 30],
+            [['email'], 'string', 'max' => 60],
+            [['telephone'], 'string', 'max' => 11],
         ];
     }
 
@@ -41,15 +42,16 @@ class Account extends \yii\db\ActiveRecord implements \yii\web\IdentityInterface
     public function attributeLabels()
     {
         return [
-            'ID' => 'ID',
+            'id' => 'ID',
             'username' => 'Username',
             'password' => 'Password',
-            'authKey' => 'Auth Key',
+            'email' => 'Email',
+            'telephone' => 'Telephone',
         ];
     }
     public function getId()
     {
-        return $this->ID;
+        return $this->id;
     }
 
     /**
@@ -57,15 +59,16 @@ class Account extends \yii\db\ActiveRecord implements \yii\web\IdentityInterface
      */
     public function getAuthKey()
     {
-        return $this->authKey;
+        return $this->email;
     }
+    
 
     /**
      * @inheritdoc
      */
-    public function validateAuthKey($authKey)
+    public function validateAuthKey($email)
     {
-        return $this->authKey === $authKey;
+        return $this->email === $email;
     }
     public static function findIdentity($id)
     {

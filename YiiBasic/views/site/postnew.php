@@ -14,13 +14,14 @@ $this->params['breadcrumbs'][] = $this->title;
 </div>
 <div class="postnew">
 
-    <?php $form = ActiveForm::begin(); ?>
+    <?php $form = ActiveForm::begin(['options' => ['enctype' => 'multipart/form-data']]); ?>
 
-        <?= $form->field($model, 'userID') ?>
+        <?= $form->field($model, 'user') ?>
+        <?= $form->field($model, 'phone') ?>
         <?= $form->field($model, 'ProductName') ?>
         <?= $form->field($model, 'Price') ?>
         <?= $form->field($model, 'Category') ?>
-        <?= $form->field($model, 'ImageURL') ?>
+        <?= $form->field($model, 'image')->fileInput() ?>
         <?= $form->field($model, 'Detail') ?>
     
         <div class="form-group">

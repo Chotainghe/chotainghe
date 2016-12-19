@@ -12,6 +12,7 @@ use app\models\Product;
 use app\models\ProductSearch;
 use app\models\SignupForm;
 use yii\web\NotFoundHttpException;
+use yii\web\UploadedFile;
 
 class SiteController extends Controller
 {
@@ -144,18 +145,35 @@ class SiteController extends Controller
     public function actionPostnew()
     {
         $model = new Postnew();
+        if ($model->load(Yii::$app->request->post())) {
+            $imageName = $model->ProductName;
+            $model->image = UploadedFile::getInstance($model, 'image');
+            $model->image->saveAs('uploads/' . $imageName . '.' . $model->image->extension);
+            $model->ImageURL = 'uploads/' . $imageName . '.' . $model->image->extension;
+            $model->save();
+            return $this->redirect(['product/view', 'id' => $model->ID]);
+        } else {
+            return $this->render('postnew', [
+                'model' => $model,
+            ]);
+        }
+    }
+    /*public function actionPostnew()
+    {
+        $model = new Postnew();
 
         if ($model->load(Yii::$app->request->post())) {
-            if ($user = $model->postnew()) 
-            {
-                return $this->goHome();
-            }
+            $file = UploadedFil::getInstance($model, 'file');
+            $model->file->saveAs('uploads/' . $model->file->baseName . '.' . $model->file->extension);
+            $model->ImageURL = $model->file->baseName . '.' . $model->file->extension;
+            if($user = $model->postnew())
+                return $this->goBack();
         }
 
         return $this->render('postnew', [
             'model' => $model,
         ]);
-    }
+    }*/
     /**
      * Displays about page.
      *

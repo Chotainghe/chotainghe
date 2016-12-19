@@ -20,7 +20,8 @@ class SignupForm extends \yii\db\ActiveRecord
      */
     public $username;
     public $password;
-    public $authKey;
+    public $email;
+    public $telephone;
     public static function tableName()
     {
         return 'user';
@@ -32,10 +33,11 @@ class SignupForm extends \yii\db\ActiveRecord
     public function rules()
     {
         return [
-            [['username', 'password', 'authKey'], 'required'],
-            [['username'], 'string', 'max' => 11],
-            [['password'], 'string', 'max' => 32],
-            [['authKey'], 'string', 'max' => 60],
+            [['username', 'telephone', 'password', 'email'], 'required'],
+            [['username'], 'string', 'max' => 30],
+            [['password'], 'string', 'max' => 30],
+            [['email'], 'string', 'max' => 60],
+            [['telephone'], 'string', 'max' => 11],
         ];
     }
 
@@ -45,10 +47,11 @@ class SignupForm extends \yii\db\ActiveRecord
     public function attributeLabels()
     {
         return [
-            'ID' => 'ID',
+            'id' => 'ID',
             'username' => 'Username',
             'password' => 'Password',
-            'authKey' => 'Auth Key',
+            'email' => 'Email',
+            'telephone' => 'Telephone',
         ];
     }
     public function signup()
@@ -58,7 +61,8 @@ class SignupForm extends \yii\db\ActiveRecord
             $user = new Account();
             $user->username = $this->username;
             $user->password = $this->password;
-            $user->authKey = $this->authKey;
+            $user->email = $this->email;
+            $user->telephone = $this->telephone;
             $user->save();
             return $user;
         }
