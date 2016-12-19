@@ -48,7 +48,7 @@ class SignupForm extends \yii\db\ActiveRecord
             'ID' => 'ID',
             'username' => 'Username',
             'password' => 'Password',
-            //'authKey' => 'Auth Key',
+            'authKey' => 'Auth Key',
         ];
     }
     public function signup()
@@ -58,7 +58,7 @@ class SignupForm extends \yii\db\ActiveRecord
             $user = new Account();
             $user->username = $this->username;
             $user->password = $this->password;
-            //$user->authKey = $this->authKey;
+            $user->authKey = $this->authKey;
             $user->save();
             return $user;
         }

@@ -124,7 +124,7 @@ AppAsset::register($this);
         </div>
 
         <div class="container">
-            <div class="col-md-9 col-sm-12 col-xs-12">
+            <div class="col-md-9 col-sm-9 col-xs-9">
                 <?= Breadcrumbs::widget([
                     'links' => isset($this->params['breadcrumbs']) ? $this->params['breadcrumbs'] : [],
                     ]) ?>

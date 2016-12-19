@@ -30,6 +30,15 @@ $this->params['breadcrumbs'][] = $this->title;
             'Price',
             'Category',
             // 'ImageURL:url',
+            // [
+            // 'attribute' => 'ImageURL',
+            // 'format' => 'html',
+            // 'label' => 'Image',
+            // 'value' => function ($data) {
+            //     return Html::img("ImageURL". $data['ImageURL'],
+            //         ['width' => '60px']);
+            // },
+            // ],
 
             ['class' => 'yii\grid\ActionColumn'],
         ],
