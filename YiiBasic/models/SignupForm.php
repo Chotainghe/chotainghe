@@ -34,10 +34,11 @@ class SignupForm extends \yii\db\ActiveRecord
     {
         return [
             [['username', 'telephone', 'password', 'email'], 'required'],
+            [['username', 'email', 'telephone'], 'unique'],
             [['username'], 'string', 'max' => 30],
-            [['password'], 'string', 'max' => 30],
-            [['email'], 'string', 'max' => 60],
-            [['telephone'], 'string', 'max' => 11],
+            [['password'], 'string', 'min' => 8],
+            [['email'], 'email'],
+            [['telephone'], 'number', 'max' => 11],
         ];
     }
 

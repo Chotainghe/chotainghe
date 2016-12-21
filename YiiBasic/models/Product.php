@@ -50,7 +50,7 @@ class Product extends \yii\db\ActiveRecord
     {
         return [
             'ID' => 'Mã Sản Phẩm',
-            'id' => 'Mã Người Dùng',
+            'user' => 'Tên Người Bán',
             'phone' => 'Số Điện Thoại',
             'ProductName' => 'Tên Sản Phẩm',
             'Price' => 'Giá (VND)',

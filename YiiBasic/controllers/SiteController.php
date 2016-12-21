@@ -129,7 +129,10 @@ class SiteController extends Controller
     public function actionSignup()
     {
         $model = new SignupForm();
-
+        if (Yii::$app->request->isAjax && $model->load(Yii::$app->request->post())) {
+        Yii::$app->response->format = 'json';
+        return ActiveForm::validate($model);
+        }
         if ($model->load(Yii::$app->request->post())) {
             if ($user = $model->signup()) 
             {
@@ -146,10 +149,10 @@ class SiteController extends Controller
     {
         $model = new Postnew();
         if ($model->load(Yii::$app->request->post())) {
-            $imageName = $model->ProductName;
+            //$imageName = $model->ProductName;
             $model->image = UploadedFile::getInstance($model, 'image');
-            $model->image->saveAs('uploads/' . $imageName . '.' . $model->image->extension);
-            $model->ImageURL = 'uploads/' . $imageName . '.' . $model->image->extension;
+            $model->image->saveAs('uploads/' . $model->image->baseName . '.' . $model->image->extension);
+            $model->ImageURL = 'uploads/' . $model->image->baseName . '.' . $model->image->extension;
             $model->save();
             return $this->redirect(['product/view', 'id' => $model->ID]);
         } else {

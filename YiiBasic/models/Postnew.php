@@ -31,11 +31,11 @@ class Postnew extends \yii\db\ActiveRecord
     public function rules()
     {
         return [
-            [['user', 'phone', 'ProductName', 'Price', 'Category', 'ImageURL', 'Detail'], 'required'],
-            [['user'], 'integer'],
-            [['phone'], 'string', 'max' => 11],
+            [['user', 'phone', 'ProductName', 'Price','ImageURL'], 'required'],
+            [['user'], 'string', 'max' => 30],
+            [['phone'], 'number', 'max' => 11],
             [['ProductName'], 'string', 'max' => 200],
-            [['Price', ], 'string', 'max' => 40],
+            [['Price', ], 'number', 'max' => 40],
             [['Category'], 'string', 'max' => 30],
             [['Detail'], 'string', 'max' => 500],
             [['ImageURL'], 'string', 'max' => 100],
@@ -49,7 +49,7 @@ class Postnew extends \yii\db\ActiveRecord
     public function attributeLabels()
     {
         return [
-            'id' => 'Mã Người Dùng',
+            'user' => 'Tên Người Dùng',
             'phone' => 'Số điện thoại',
             'ProductName' => 'Tên Sản Phẩm',
             'Price' => 'Giá',
