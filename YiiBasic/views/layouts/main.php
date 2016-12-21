@@ -58,7 +58,7 @@ AppAsset::register($this);
     echo "<div class='navbar-nav navbar-left'>
                 <ul class='nav navbar-nav navbar-left'>
                      <li>
-                     <a href='http://localhost/yii/Yiibasic/web/index.php?r=product%2Findex&ProductSearch%5BProductName%5D=tai+nghe'>Tai nghe</a>
+                     <a href='http://chotainghe.com/Yiibasic/web/index.php?r=product%2Findex&ProductSearch%5BProductName%5D=tai+nghe'>Tai nghe</a>
                      </li>
                      <li>
                      <a href='http://chotainghe.com/Yiibasic/web/index.php?r=product%2Findex&ProductSearch%5BProductName%5D=DAC Ampli'>DAC-Ampli</a>
@@ -114,17 +114,17 @@ AppAsset::register($this);
 
         <div class="col-md-3 col-sm-12 col-xs-12">
             <div class="list-group">
-                <a href="#" class="list-group-item active">Tất cả</a>
-                <a href="#" class="list-group-item">Tai nghe AKG</a>
-                <a href="#" class="list-group-item">Tai nghe xiaomi</a>
-                <a href="#" class="list-group-item">Tai nghe sony</a>
-                <a href="#" class="list-group-item">Loa BMB</a>
-                <a href="#" class="list-group-item">Loa JBL</a>
+                <a href="http://chotainghe.com/Yiibasic/web/index.php?r=product%2Findex" class="list-group-item active">Tất cả</a>
+                <a href="http://chotainghe.com/Yiibasic/web/index.php?r=product%2Findex&ProductSearch%5BProductName%5D=tai+nghe+akg" class="list-group-item">Tai nghe AKG</a>
+                <a href="http://chotainghe.com/Yiibasic/web/index.php?r=product%2Findex&ProductSearch%5BProductName%5D=tai+nghe+xiaomi" class="list-group-item">Tai nghe xiaomi</a>
+                <a href="http://chotainghe.com/Yiibasic/web/index.php?r=product%2Findex&ProductSearch%5BProductName%5D=tai+nghe+sony" class="list-group-item">Tai nghe sony</a>
+                <a href="http://chotainghe.com/Yiibasic/web/index.php?r=product%2Findex&ProductSearch%5BProductName%5D=Loa+BMB" class="list-group-item">Loa BMB</a>
+                <a href="http://chotainghe.com/Yiibasic/web/index.php?r=product%2Findex&ProductSearch%5BProductName%5D=Loa+JBL" class="list-group-item">Loa JBL</a>
             </div>
         </div>
 
         <div class="container">
-            <div class="col-md-9 col-sm-12 col-xs-12">
+            <div class="col-md-9 col-sm-9 col-xs-9">
                 <?= Breadcrumbs::widget([
                     'links' => isset($this->params['breadcrumbs']) ? $this->params['breadcrumbs'] : [],
                     ]) ?>
