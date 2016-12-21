@@ -33,13 +33,13 @@ class Postnew extends \yii\db\ActiveRecord
         return [
             [['user', 'phone', 'ProductName', 'Price','ImageURL'], 'required'],
             [['user'], 'string', 'max' => 30],
-            [['phone'], 'number', 'max' => 11],
+            [['phone'], 'string', 'max' => 11],
             [['ProductName'], 'string', 'max' => 200],
-            [['Price', ], 'number', 'max' => 40],
+            [['Price', ], 'string', 'max' => 40],
             [['Category'], 'string', 'max' => 30],
             [['Detail'], 'string', 'max' => 500],
             [['ImageURL'], 'string', 'max' => 100],
-            [['image'], 'file'],
+            [['image'], 'file',],
         ];
     }
 
