@@ -30,9 +30,9 @@ class Account extends \yii\db\ActiveRecord implements \yii\web\IdentityInterface
         return [
             [['username', 'telephone', 'password', 'email'], 'required'],
             [['username'], 'string', 'max' => 30],
-            [['password'], 'string', 'min' => 8],
-            [['email'], 'email'],
-            [['telephone'], 'number', 'max' => 11],
+            [['password'], 'string', 'max' => 30],
+            [['email'], 'string', 'max' => 60],
+            [['telephone'], 'string', 'max' => 11],
         ];
     }
 

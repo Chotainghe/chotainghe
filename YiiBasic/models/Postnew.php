@@ -49,7 +49,7 @@ class Postnew extends \yii\db\ActiveRecord
     public function attributeLabels()
     {
         return [
-            'user' => 'Tên Người Dùng',
+            'id' => 'Mã Người Dùng',
             'phone' => 'Số điện thoại',
             'ProductName' => 'Tên Sản Phẩm',
             'Price' => 'Giá',

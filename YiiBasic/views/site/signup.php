@@ -15,8 +15,7 @@ $this->params['breadcrumbs'][] = $this->title;
 </div>
 <div class="signup">
 
-    <?php $form = ActiveForm::begin(['username' => 'site-signup',
-                                    'enableAjaxValidation' => true]); ?>
+    <?php $form = ActiveForm::begin(); ?>
 
         <?= $form->field($model, 'username') ?>
         <?= $form->field($model, 'telephone') ?>

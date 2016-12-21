@@ -2,7 +2,7 @@
 
 use yii\helpers\Html;
 use yii\widgets\ActiveForm;
-use app\models\Postnew;
+
 /* @var $this yii\web\View */
 /* @var $model app\models\Postnew */
 /* @var $form ActiveForm */
@@ -16,8 +16,8 @@ $this->params['breadcrumbs'][] = $this->title;
 
     <?php $form = ActiveForm::begin(['options' => ['enctype' => 'multipart/form-data']]); ?>
 
-        <?= $form->field($model, 'user')->textInput(['placeholder' => $model->getAttributeLabel( Yii::$app->user->identity->username)]) ?>
-        <?= $form->field($model, 'phone')->textInput(['placeholder' => $model->getAttributeLabel( Yii::$app->user->identity->telephone )]) ?>
+        <?= $form->field($model, 'user') ?>
+        <?= $form->field($model, 'phone') ?>
         <?= $form->field($model, 'ProductName') ?>
         <?= $form->field($model, 'Price') ?>
         <?= $form->field($model, 'Category') ?>
