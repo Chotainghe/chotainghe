@@ -18,7 +18,7 @@ class ProductSearch extends Product
     public function rules()
     {
         return [
-            [['ID', 'phone', 'ProductName', 'Price', 'Category', 'ImageURL', 'Detail'], 'required'],
+            //[['ID', 'phone', 'ProductName', 'Price', 'Category', 'ImageURL', 'Detail'], 'required'],
             [['ID'], 'integer'],
             [['ProductName', 'Price', 'Category', 'ImageURL', 'Detail', 'phone'], 'safe'],
         ];
@@ -48,6 +48,7 @@ class ProductSearch extends Product
 
         $dataProvider = new ActiveDataProvider([
             'query' => $query,
+            'sort' => ['defaultOrder'=>['ID'=>SORT_DESC]],
         ]);
 
         $this->load($params);
