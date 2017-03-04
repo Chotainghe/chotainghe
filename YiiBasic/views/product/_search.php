@@ -14,7 +14,7 @@ use yii\widgets\ActiveForm;
         'action' => ['index'],
         'method' => 'get',
         ]); ?>
-        <?= $form->Field($model, 'ProductName')->label('')->textInput(['placeholder' => $model->getAttributeLabel( 'Search' )]) ?>
+        <?= $form->Field($model, 'ProductName')->label('')->textInput(['placeholder' => $model->getAttributeLabel( 'Tìm kiếm theo tên sản phẩm' )]) ?>
 
         <div class="form-group">
             <?= Html::submitButton('Tìm kiếm', ['class' => 'btn btn-primary']) ?>

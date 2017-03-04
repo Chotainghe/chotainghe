@@ -7,5 +7,5 @@ use yii\helpers\Url;
     <h4 class="title">
     <?= Html::a(Html::encode($model->ProductName), ['view', 'id' => $model->ID]) ?>
     </h4>
-    <?= Html::img($model->ImageURL,['class' => 'col-md-6 col-sm-12 col-xs-12 img-responsive']) ?>
+    <?= Html::img($model->ImageURL,['class' => 'col-md-9 col-sm-12 col-xs-12 img-responsive']) ?>
 </article>

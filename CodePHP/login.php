@@ -79,7 +79,9 @@
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav navbar-left">
                     <li>
-                        <a href="#">Tai nghe</a>
+                    <?php
+                        echo "Tai nghe";
+                    ?>
                     </li>
 					 <li>
                         <a href="#">DAC-Ampli</a>

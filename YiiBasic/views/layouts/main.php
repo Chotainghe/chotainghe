@@ -58,16 +58,16 @@ AppAsset::register($this);
     echo "<div class='navbar-nav navbar-left'>
                 <ul class='nav navbar-nav navbar-left'>
                      <li>
-                     <a href='http://chotainghe.com/Yiibasic/web/index.php?r=product%2Findex&ProductSearch%5BProductName%5D=tai+nghe'>Tai nghe</a>
+                     <a href='http://chotainghe.com/Yiibasic/web/index.php?r=product%2Findex&ProductSearch%5BProductName%5D=duong da'>Dưỡng da</a>
                      </li>
                      <li>
-                     <a href='http://chotainghe.com/Yiibasic/web/index.php?r=product%2Findex&ProductSearch%5BProductName%5D=DAC Ampli'>DAC-Ampli</a>
+                     <a href='http://chotainghe.com/Yiibasic/web/index.php?r=product%2Findex&ProductSearch%5BProductName%5D=mặt'>Chăm sóc mặt</a>
                      </li>
                      <li>
-                     <a href='http://chotainghe.com/Yiibasic/web/index.php?r=product%2Findex&ProductSearch%5BProductName%5D=Loa mini Bluetooth'>Loa mini/Bluetooth</a>
+                     <a href='http://chotainghe.com/Yiibasic/web/index.php?r=product%2Findex&ProductSearch%5BProductName%5D=tóc'>Chăm sóc tóc</a>
                      </li>
                      <li>
-                     <a href='http://chotainghe.com/Yiibasic/web/index.php?r=product%2Findex&ProductSearch%5BProductName%5D=the nho'>Thẻ nhớ</a>
+                     <a href='http://chotainghe.com/Yiibasic/web/index.php?r=product%2Findex&ProductSearch%5BProductName%5D=môi'>Son môi</a>
                      </li> 
                  </ul>
              </div>";
@@ -110,20 +110,20 @@ AppAsset::register($this);
 </nav>
 <!-- Page Content -->
 <div class="container">
-    <div class="row">
+    <div class="row well">
 
-        <div class="col-md-3 col-sm-12 col-xs-12">
+        <div class="col-md-3 col-sm-12 col-xs-12 well">
             <div class="list-group">
-                <a href="http://chotainghe.com/Yiibasic/web/index.php?r=product%2Findex" class="list-group-item active">Tất cả</a>
-                <a href="http://chotainghe.com/Yiibasic/web/index.php?r=product%2Findex&ProductSearch%5BProductName%5D=tai+nghe+akg" class="list-group-item">Tai nghe AKG</a>
-                <a href="http://chotainghe.com/Yiibasic/web/index.php?r=product%2Findex&ProductSearch%5BProductName%5D=tai+nghe+xiaomi" class="list-group-item">Tai nghe xiaomi</a>
-                <a href="http://chotainghe.com/Yiibasic/web/index.php?r=product%2Findex&ProductSearch%5BProductName%5D=tai+nghe+sony" class="list-group-item">Tai nghe sony</a>
-                <a href="http://chotainghe.com/Yiibasic/web/index.php?r=product%2Findex&ProductSearch%5BProductName%5D=Loa+BMB" class="list-group-item">Loa BMB</a>
-                <a href="http://chotainghe.com/Yiibasic/web/index.php?r=product%2Findex&ProductSearch%5BProductName%5D=Loa+JBL" class="list-group-item">Loa JBL</a>
+                <a href="http://localhost/Yiibasic/web/index.php?r=product%2Findex" class="list-group-item active">Tất cả</a>
+                <a href="http://localhost/Yiibasic/web/index.php?r=product%2Findex&ProductSearch%5BProductName%5D=duong da" class="list-group-item">Dưỡng da</a>
+                <a href="http://localhost/Yiibasic/web/index.php?r=product%2Findex&ProductSearch%5BProductName%5D=mat" class="list-group-item">Chăm sóc da mặt</a>
+                <a href="http://localhost/Yiibasic/web/index.php?r=product%2Findex&ProductSearch%5BProductName%5D=toc" class="list-group-item">Chăm sóc tóc</a>
+                <a href="http://chotainghe.com/Yiibasic/web/index.php?r=product%2Findex&ProductSearch%5BProductName%5D=Tay te bao" class="list-group-item">Tẩy tế bào chết</a>
+                <a href="http://chotainghe.com/Yiibasic/web/index.php?r=product%2Findex&ProductSearch%5BProductName%5D=son phan" class="list-group-item">Son phấn</a>
             </div>
         </div>
 
-        <div class="container">
+        <div class="container well-lg">
             <div class="col-md-9 col-sm-9 col-xs-9">
                 <?= Breadcrumbs::widget([
                     'links' => isset($this->params['breadcrumbs']) ? $this->params['breadcrumbs'] : [],
@@ -140,7 +140,6 @@ AppAsset::register($this);
                     <p class="pull-right"><?= Yii::powered() ?></p>
                 </div>
             </footer>
-
             <?php $this->endBody() ?>
         </body>
         <!-- jQuery -->
